@@ -7,7 +7,7 @@ const knex = require('../knex');
 
 /* GET users listing. */
 router.post('/users', (req, res, next) => {
-  console.log('hey');
+  console.log(req.body);
 })
 
 module.exports = router;
