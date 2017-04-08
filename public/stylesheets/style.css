@@ -6,3 +6,26 @@ body {
 a {
   color: #00B7FF;
 }
+.galvanize_container {
+  background-image: url('../images/A-Body-in-Motion-Stays-in-Motion-thumb1-960x540.jpg');
+  background-size:cover;
+  height: 1000px;
+}
+.signup {
+  background-color: rgb(9, 209, 179);
+}
+.scriptFont {
+  font-family: 'Pacifico', cursive;
+}
+.signFont {
+  font-family: 'Droid Sans', sans-serif;
+}
+#signUp {
+  border-radius: 100px 100px 100px 100px;
+  background-color:#ffee58;
+  color: white
+}
+#signUp:hover {
+  background-color: black;
+  color:blue;
+}

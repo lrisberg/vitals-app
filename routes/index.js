@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('signup', { title: 'Express' });
 });
 
 module.exports = router;
