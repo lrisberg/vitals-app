@@ -8,14 +8,14 @@ exports.seed = function(knex) {
       return knex('users').insert([
         {
           id:1,
-          first_name: "Lauren",
-          last_name: "Risberg",
+          first_name: "Bobby",
+          last_name: "McBobbleston",
           email: "testemail@gmail.com",
           hashed_password: "$2a$12$YbS5MlJIsaRiYs2Qt8cxeOgAwyLpbT2qnwgNRQLv0Hvx6wb9mxQaC",
-          age: 25,
-          gender: 'female',
-          height: 65,
-          weight: 110.2,
+          age: 30,
+          gender: 'male',
+          height: 72,
+          weight: 180.2,
         }
       ]);
     })
