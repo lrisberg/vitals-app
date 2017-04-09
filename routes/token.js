@@ -9,19 +9,21 @@ const bcrypt = require('bcrypt-as-promised');
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';
 
+function incorrectCredentials(res) {
+  res.status(400);
+  res.send('Bad email or password');
+}
+
 router.post('/token', (req, res, next) => {
-  let credentials = req.body;
-  let email = credentials.email;
-  let password = credentials.password;
+  let email = req.body.email;
+  let password = req.body.password;
 
   knex('users')
     .select(['id', 'email', 'hashed_password'])
     .where('email', email)
     .then((users) => {
       if (users.length === 0) {
-        res.setHeader("Content-Type", "plain/text");
-        res.status(400);
-        res.send('Bad email or password');
+        incorrectCredentials(res);
         return;
       }
       bcrypt.compare(password, users[0].hashed_password)
@@ -32,15 +34,14 @@ router.post('/token', (req, res, next) => {
           res.cookie('token', token, {
             httpOnly: true
           });
-          const user = users[0];
-          delete user.hashed_password;
-          res.send(humps.camelizeKeys(user));
+          delete users[0].hashed_password;
+          res.setHeader('Content-Type', 'application/json');
+          res.status(200);
+          res.send(users[0]);
         }, () => {
-          res.setHeader('Content-Type', 'plain/text');
-          res.status(400);
-          res.send('Bad email or password');
-        });
-    })
-})
+          incorrectCredentials(res);
+        })
+    });
+});
 
 module.exports = router;
