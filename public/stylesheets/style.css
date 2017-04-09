@@ -6,7 +6,103 @@ body {
 a {
   color: #00B7FF;
 }
+
 .carousel-item{
   height: 600;
   width: 800;
+
+.galvanize_container {
+  background-image: url('../images/A-Body-in-Motion-Stays-in-Motion-thumb1-960x540.jpg');
+  background-size:cover;
+  height: 1000px;
+}
+.testimonials_container {
+  background-image: url('../images/healthy-people.jpg');
+  background-size:cover;
+  height:500px;
+}
+.signup {
+  background-color: rgb(9, 209, 179);
+}
+.scriptFont {
+  font-family: 'Pacifico', cursive;
+}
+.signFont {
+  font-family: 'Droid Sans', sans-serif;
+}
+#signUp {
+  border-radius: 100px 100px 100px 100px;
+  background-color:#ffee58;
+  color: white
+}
+#signUp:hover {
+  background-color: black;
+  color:blue;
+}
+.login_container {
+  background-image: url('../images/morning_workout.jpg');
+  background-size:cover;
+  height:500px;
+}
+
+#slides {
+  overflow: hidden;
+  position: inherit;;
+  width: 100%;
+  height: 150px;
+}
+
+#slides ul {
+  list-style: none;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#slides li {
+  width: 100%;
+  height: 150px;
+  float: left;
+  text-align: center;
+  position: inherit;;
+  font-family: lato, sans-serif;
+  background-color: white;
+}
+
+.btn-bar {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 40px;
+}
+
+#buttons {
+  padding: 0 0 5px 0;
+  float: right;
+}
+#buttons a {
+  text-align: center;
+  display: block;
+  font-size: 50px;
+  float: left;
+  outline: 0;
+  margin: 0 60px;
+  color: rgb(62, 211, 244);
+  text-decoration: none;
+  display: block;
+  padding: 9px;
+  width: 35px;
+}
+.lobster {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+}
+
+a#prev:hover,
+a#next:hover {
+  color: #FFF;
+  text-shadow: .5px 0px #b14943;
 }
