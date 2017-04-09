@@ -6,6 +6,12 @@
     "start": "node ./bin/www",
     "test": "mocha"
   },
+  "scripts": {
+    "start": "node ./bin/www",
+    "knex": "knex",
+    "heroku-postbuild": "knex migrate:rollback; knex migrate:latest; knex seed:run;",
+    "nodemon": "node app.js"
+  },
   "dependencies": {
     "bcrypt-as-promised": "^1.1.0",
     "body-parser": "~1.16.0",
@@ -27,5 +33,8 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "supertest": "^3.0.0"
+  },
+  "engines": {
+    "node": "v7.7.2"
   }
 }
