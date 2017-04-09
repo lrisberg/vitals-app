@@ -1,6 +1,7 @@
 'use strict';
 
 process.env.NODE_ENV = 'test';
+process.env.JWT_KEY = 'testsecret'
 
 const assert = require('chai').assert;
 const { suite, test } = require('mocha');
@@ -72,7 +73,7 @@ suite('routes/token', () => {
         const cookieValue = res.headers['set-cookie'][0];
         const tokenValue = cookieValue.match(/token=([a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+\.[a-zA-Z0-9\-_]+);/)[1];
 
-        jwt.verify(tokenValue, 'itsasecret', (err, decoded) => {
+        jwt.verify(tokenValue, 'testsecret', (err, decoded) => {
           if (err) {
             done(err);
           } else {
