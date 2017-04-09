@@ -10,7 +10,7 @@ exports.seed = function(knex) {
           id:1,
           user_id: 1,
           doctor_id: 1,
-          body: "He kept saying 'That's what shee said' over and over."
+          body: "He kept saying 'That's what she said' over and over."
         }
       ]);
     })

@@ -35,7 +35,7 @@ $(document).ready(() => {
 
       $.ajax(options)
         .done(() => {
-          window.location.href = '/';
+          window.location.href = 'dashboard';
         })
         .fail(($xhr) => {
           Materialize.toast($xhr.responseText, 3000);
