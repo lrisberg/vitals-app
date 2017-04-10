@@ -44,4 +44,11 @@ router.post('/token', (req, res, next) => {
     });
 });
 
+router.delete('/token', function(req, res, next) {
+  res.clearCookie('token');
+  res.status(200);
+  res.send()
+  
+});
+
 module.exports = router;
