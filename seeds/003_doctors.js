@@ -7,6 +7,7 @@ exports.seed = function(knex) {
       return knex('doctors').insert([
         {
           id:1,
+          user_id: 1,
           first_name: "Michael",
           last_name: "Scott",
           email: "IAmMichaelScott@Gmail.com",
@@ -16,6 +17,7 @@ exports.seed = function(knex) {
         },
         {
           id:2,
+          user_id: 1,
           first_name: "David",
           last_name: "Gnarl",
           email: "DrGnarl@Gmail.com",
@@ -25,6 +27,7 @@ exports.seed = function(knex) {
         },
         {
           id:3,
+          user_id: 2,
           first_name: "Vanessa",
           last_name: "Carlton",
           email: "DrCarlton@AOL.com",
@@ -34,6 +37,7 @@ exports.seed = function(knex) {
         },
         {
           id:4,
+          user_id: 3,
           first_name: "Spud",
           last_name: "McKenzie",
           email: "spud@AOL.com",
@@ -43,6 +47,7 @@ exports.seed = function(knex) {
         },
         {
           id:5,
+          user_id: 3,
           first_name: "Clara",
           last_name: "Higgins",
           email: "drhiggins@AOL.com",

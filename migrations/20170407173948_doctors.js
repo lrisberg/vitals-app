@@ -7,6 +7,12 @@ exports.up = function(knex) {
     table.string('phone');
     table.string('address');
     table.integer('specialty_id').references('id').inTable('specialties').onDelete('CASCADE');
+    table
+      .integer('user_id')
+      .references('id')
+      .inTable('users')
+      .notNullable()
+      .onDelete('CASCADE');
     table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
     table.timestamp('updated_at').notNullable().defaultTo(knex.raw('now()'));
   })

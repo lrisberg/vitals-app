@@ -17,8 +17,6 @@ $(document).ready(function() {
       const gender = $('#gender').val().trim();
       const weight = $('#weight').val().trim();
 
-
-
       const options = {
         contentType: 'application/json',
         data: JSON.stringify({

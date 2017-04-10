@@ -1,14 +1,16 @@
-html,body{height:100%;}
-.carousel,.item,.active{height:100%;}
-.carousel-inner{height:100%;}
-.fill{width:100%;height:100%;background-position:center;background-size:cover;}
-
-.caro {
-  margin-top: -20px;
-  background-size: cover;
+html {
+    position: relative;
+    min-height: 100%;
+    height:auto;
 }
 
 
+
+.caro {
+  margin-top: -20px;
+  height:100%;
+
+}
 
 .signup {
   background-image: url('../images/morning_workout.jpg');
@@ -68,7 +70,6 @@ footer {
 .lobster {
   color:white;
 }
-
 
 /*Buttons on Doctor Page CSS*/
 /*!

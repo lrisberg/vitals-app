@@ -7,43 +7,53 @@ exports.seed = function(knex) {
       return knex('specialties').insert([
         {
           id:1,
-          name: "General Practitioner"
+          name: "General Practitioner",
+          logo: "../public/images/general-prac.jpg"
         },
         {
           id:2,
-          name: "Optometrist"
+          name: "Optometrist",
+          logo: "../public/images/black-glasses.svg"
         },
         {
           id:3,
-          name: "Dentist"
+          name: "Dentist",
+          logo: "../public/images/dentists.jpg"
         },
         {
           id:4,
-          name: "Cardiologist"
+          name: "Cardiologist",
+          logo: "../public/images/heart.jpg"
         },
         {
           id:5,
-          name: "Orthodontist"
+          name: "Orthodontist",
+          logo: "../public/images/orthodontist.jpeg"
         },
         {
           id:6,
-          name: "Chiropractor"
+          name: "Chiropractor",
+          logo: "../public/images/spine.png"
         },
         {
           id:7,
-          name: "Proctologist"
+          name: "Proctologist",
+          logo: "../public/images/finger.png"
         },
         {
           id: 8,
-          name: "Gynecologist"
+          name: "Gynecologist",
+          logo: "../public/images/baby.jpg"
         },
         {
           id:9,
-          name: "Pathologist"
+          name: "Pathologist",
+          logo: "../public/images/pathology.jpg"
         },
         {
           id:10,
-          name: "Urologist"
+          name: "Urologist",
+          logo: "../public/images/pin-bladder_grande.jpg"
         }
       ]);
     })
