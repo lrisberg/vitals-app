@@ -12,10 +12,11 @@ $(document).ready(() => {
 
         $.ajax(options)
           .done(() => {
-            window.location.replace = '/index';
+            window.location.href = '/';
           })
           .fail(() => {
-            console.log('Unable to log out. Please try again.');
+            window.location.href = '/';
+
           });
 
     })
