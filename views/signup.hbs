@@ -1,140 +1,141 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
 
     <!-- jQuery -->
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-      <link href="https://fonts.googleapis.com/css?family=Pacifico|Droid+Sans" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
+    <!-- bootstrap cdn -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Materialize -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+<!--
 
-    <!-- Javascript -->
-    <script src="/js/signup.js"></script>
+    <!-- Custom Styles -->
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 
-  </head>
-<body class = "signup">
-  <nav class="amber lighten-2" role="navigation">
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">
-        <span class="logo-text scriptFont">Vitals</span>
-      </a>
+    <title>Style Guide</title>
+</head>
 
-      <ul class="right hide-on-med-and-down">
-        <li><a href="/index.html">Home</a></li>
-        <li class="firstNavItem"></li>
-        <li class="secondNavItem"></li>
-      </ul>
-  </nav>
-</div>
-<div class = "row">
-<div class="col s12 m12">
-<h2 class="center white-text signFont">Sign Up!</h2>
-<h5 class="center scriptFont2 white-text">See what the fuss is about! Sign up today!</h5>
-</div>
-</div>
-
-<div id="index-banner" class="galvanize_container">
-      <div id="container" class="container">
-
-</div>
-        <div class="row">
-          <form id="signUpForm" class="col offset-s2 s8">
-            <div class="card">
-              <div class="card-content">
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="First Name" id="firstName" type="text" class="validate">
-                    <label for="fname">First Name</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Last Name" id="lastName" type="text" class="validate">
-                    <label for="lname">Last Name</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Email" id="email" type="text" class="validate">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Password" id="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Age" id="age" type="number" class="validate">
-                    <label for="age">Age</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Gender" id="gender" type="text" class="validate">
-                    <label for="gender">Gender</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Height" id="height" type="number" class="validate">
-                    <label for="height">Height</label>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input placeholder="Weight" id="weight" type="number" class="validate">
-                    <label for="weight">Weight</label>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="card-action center">
-                <button class="amber lighten-2 waves-effect waves-light btn-large" type="submit" name="action" id="signUp">
-                  Sign up
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
+<body>
+  <div class="container-fluid">
+  <nav class="navbar navbar-custom">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/index">Vitals</a>
       </div>
+
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class=""><a href="/testimonials">Testimonials<span class="sr-only"></span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/doctor">Doctor</a></li>
+              <li><a href="/calander">Calander</a></li>
+              <li><a href="/dashboard">BMI</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="email" class="form-control" name="username" placeholder="email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Sign In</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <!-- <li class=""><a href="/login">Login<span class="sr-only"></span></a></li> -->
+          <li class=""><a href="/signup">Sign up<span class="sr-only"></span></a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- MAIN CONTENT -->
+  <div class = "container-fluid signup">
+    <h1 class = "center header">Sign Up Today!</h1>
+    <br><br>
+  <div class = "container">
+  <form class="right">
+    <div class="form-group row">
+  <label for="first_name" class="col-sm-1 col-xs-10 col-form-label">First Name</label>
+  <div class="col-sm-4">
+    <input class="form-control" type="text" placeholder="First Name" id="firstName">
+  </div>
+  </div>
+
+  <div class="form-group row">
+<label for="last_name" class="col-sm-1 col-xs-10 col-form-label">Last Name</label>
+<div class="col-sm-4 col-xs-10">
+  <input class="form-control" type="text" placeholder="Last Name" id="lastName">
+</div>
+</div>
+
+  <div class="form-group row">
+    <label for="email" class="col-sm-1 col-xs-10 col-form-label">Email address</label>
+    <div class="col-sm-4">
+    <input type="email" class="form-control" id="email" placeholder="Enter email">
+  </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="col-sm-1 col-xs-10 col-form-label">Password</label>
+    <div class="col-sm-4">
+    <input type="password" class="form-control" id="password" placeholder="Password">
+    <p id="passwordHelpBlock" class="form-text text-muted">
+  Your password must be at least seven characters long.
+</p>
+  </div>
+  </div>
+  <div class="form-group row">
+    <label for="exampleSelect1" class="col-sm-1 col-xs-10 col-form-label">Gender</label>
+    <div class = "col-sm-4">
+    <select class="form-control" id="height">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+      <option>I choose not to identify</option>
+    </select>
+  </div>
+  </div>
+
+  <!-- <div class="form-group row">
+<label for="weight" class="col-sm-1 col-xs-10 col-form-label">Weight</label>
+<div class="col-sm-4">
+  <input class="form-control" type="text" placeholder="Ex. '185'" id="weight">
+</div>
+</div> -->
+
+  <button type="submit" class=" col-sm-offset-2 btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+
+  <footer class="navbar-default navbar-fixed-bottom">
+    <div class="container-fluid text-center">
+      <span>© 2017 Vitals Development Group</span>
     </div>
-    <footer class="amber lighten-2 page-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s6">
-                        <h5 class="white-text scriptFont">Vitals</h5>
-                    </div>
-                    <div class="col l4 offset-l2 s6">
-                        <ul>
-                            <li><a class="grey-text text-lighten-3 right scriptFont2" href="index.html">Home</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container center">
-                    © 2017 Vitals
-                </div>
-            </div>
-        </footer>
-  </body>
-      <!-- <script src="/js/nav.js"></script> -->
+  </footer>
+</div>
+</div>
+</body>
+<script src ="/js/login.js"></script>
+<script src ="/js/signup.js"></script>
 </html>
