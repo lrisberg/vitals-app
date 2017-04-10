@@ -17,7 +17,18 @@ $(document).ready(function() {
       const gender = $('#gender').val().trim();
       const weight = $('#weight').val().trim();
 
-
+      if (!firstName) {
+    toastr.warning("Please enter your first name")
+      }
+      if (!lastName) {
+    toastr.warning("Please enter your last name")
+      }
+      if (!email) {
+    toastr.warning("Please enter a valid email address")
+      }
+      if (!password) {
+    toastr.warning("Please enter your password")
+      }
 
       const options = {
         contentType: 'application/json',

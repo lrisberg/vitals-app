@@ -7,9 +7,13 @@ $(document).ready(() => {
       const email = $('#loginEmail').val().trim();
       const password = $('#loginPassword').val();
 
-      if (email === '') {
+      if (!email) {
         console.log("hello")
     toastr.warning("Please enter a valid email address")
+      }
+      if (!password) {
+        console.log("hello")
+    toastr.warning("Please enter your password")
       }
 
       const options = {
