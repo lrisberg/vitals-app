@@ -8,52 +8,52 @@ exports.seed = function(knex) {
         {
           id:1,
           name: "General Practitioner",
-          logo: "../public/images/general-prac.jpg"
+          logo: "http://www.chelseafootballshirts.org.uk/wp-content/uploads/2016/02/1450171356-apolo.jpg"
         },
         {
           id:2,
           name: "Optometrist",
-          logo: "../public/images/black-glasses.svg"
+          logo: "http://www.clker.com/cliparts/S/3/L/6/C/v/black-glasses.svg"
         },
         {
           id:3,
           name: "Dentist",
-          logo: "../public/images/dentists.jpg"
+          logo: "https://vcaredentalclinic.files.wordpress.com/2014/10/url.jpg"
         },
         {
           id:4,
           name: "Cardiologist",
-          logo: "../public/images/heart.jpg"
+          logo: "https://static.turbosquid.com/Preview/2014/07/10__10_47_50/Thumb.jpgb843e915-8d1c-49a7-aaf0-fb6ef4309d0aOriginal.jpg"
         },
         {
           id:5,
           name: "Orthodontist",
-          logo: "../public/images/orthodontist.jpeg"
+          logo: "http://www.clipartbest.com/cliparts/4c9/6kd/4c96kddgi.jpg"
         },
         {
           id:6,
           name: "Chiropractor",
-          logo: "../public/images/spine.png"
+          logo: "http://www.clipartkid.com/images/28/spine-clipart-cliparts-of-spine-free-download-wmf-eps-emf-svg-xwE6Tz-clipart.png"
         },
         {
           id:7,
           name: "Proctologist",
-          logo: "../public/images/finger.png"
+          logo: "http://www.clipartkid.com/images/138/cartoon-hand-pointing-with-the-index-finger-outline-in-black-vector-lVZYPU-clipart.jpg"
         },
         {
           id: 8,
           name: "Gynecologist",
-          logo: "../public/images/baby.jpg"
+          logo: "http://clipart-library.com/images/5TRrgeXqc.jpg"
         },
         {
           id:9,
           name: "Pathologist",
-          logo: "../public/images/pathology.jpg"
+          logo: "http://www.refluxmd.com/wp-content/uploads/2012/12/GERD-pathology-lab-results.jpg"
         },
         {
           id:10,
           name: "Urologist",
-          logo: "../public/images/pin-bladder_grande.jpg"
+          logo: "http://cdn.shopify.com/s/files/1/0392/9333/products/pin-bladder_grande.jpg?v=1458084198"
         }
       ]);
     })

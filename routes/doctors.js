@@ -30,7 +30,6 @@ router.get('/doctors', checkAuth, (req, res, next) => {
     .join('specialties', 'specialties.id', 'specialty_id')
     .where('user_id', req.user.userId)
     .then((doctorsFromKnex) => {
-      console.log(doctorsFromKnex);
       res.render('doctors', { doctors: doctorsFromKnex });
     })
 });
