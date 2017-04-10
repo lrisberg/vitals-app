@@ -1,0 +1,9 @@
+.panel-footer.panel-custom{
+  background-color: rgb(238, 237, 72);
+}
+.name{
+  font-size: 20px;
+}
+.aboutpage{
+  background-image: url('./assets/images/ekg.jpg');
+}
