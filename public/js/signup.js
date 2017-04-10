@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  $('.button-collapse').sideNav();
+  // $('.button-collapse').sideNav();
 
   // eslint-disable-next-line max-statements
   $('#signUpForm').submit((event) => {
@@ -12,9 +12,9 @@
     const email = $('#email').val().trim();
     const password = $('#password').val();
     const age = $('#age').val().trim();
-    const height = $('#height').val().trim();
+    // const height = $('#height').val().trim();
     const gender = $('#gender').val().trim();
-    const weight = $('#weight').val().trim();
+    // const weight = $('#weight').val().trim();
 
     if (!firstName) {
       return Materialize.toast('First name must not be blank', 3000);
