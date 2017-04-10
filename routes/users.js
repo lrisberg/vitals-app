@@ -5,9 +5,11 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const knex = require('../knex');
 const humps = require('humps');
+const ev = require('express-validation');
+const validations = require('../validations/signup');
 
 /* GET users listing. */
-router.post('/users/', (req, res, next) => {
+router.post('/users/', ev(validations.post), (req, res, next) => {
   bcrypt.hash(req.body.password, 12)
     .then((hashed_password) => {
       return knex('users')
