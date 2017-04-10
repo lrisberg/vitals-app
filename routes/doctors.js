@@ -27,8 +27,10 @@ function checkAuth(req, res, next) {
 /* GET home page. */
 router.get('/doctors', checkAuth, (req, res, next) => {
   knex('doctors')
+    .join('specialties', 'specialties.id', 'specialty_id')
     .where('user_id', req.user.userId)
     .then((doctorsFromKnex) => {
+      console.log(doctorsFromKnex);
       res.render('doctors', { doctors: doctorsFromKnex });
     })
 });
