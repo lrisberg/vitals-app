@@ -30,7 +30,14 @@ router.get('/dashboard', checkAuth, (req, res, next) => {
     .where('id', req.user.userId)
     .then((usersFromKnex) => {
       let user = usersFromKnex[0]
-      res.render('dashboard', { name: user.first_name });
+      res.render('dashboard', {
+        firstName: user.first_name,
+        lastName: user.last_name,
+        age: user.age,
+        weight: user.weight,
+        height: user.height,
+        gender: user.gender
+      });
     })
 });
 
