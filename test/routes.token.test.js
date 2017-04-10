@@ -104,7 +104,4 @@ suite('routes/token', () => {
         done();
       });
   });
-
-
-
 })
