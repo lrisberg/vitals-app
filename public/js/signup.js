@@ -2,7 +2,7 @@ $(document).ready(function() {
   (function() {
     'use strict';
 
-    $('.button-collapse').sideNav();
+    // $('.button-collapse').sideNav();
 
     // eslint-disable-next-line max-statements
     $('#signUpForm').submit((event) => {
@@ -17,28 +17,7 @@ $(document).ready(function() {
       const gender = $('#gender').val().trim();
       const weight = $('#weight').val().trim();
 
-      if (!firstName) {
-        return Materialize.toast('First name must not be blank', 3000);
-      }
 
-      if (!lastName) {
-        return Materialize.toast('Last name must not be blank', 3000);
-      }
-
-      if (!email) {
-        return Materialize.toast('Email must not be blank', 3000);
-      }
-
-      if (email.indexOf('@') < 0) {
-        return Materialize.toast('Email must be valid', 3000);
-      }
-
-      if (!password || password.length < 7) {
-        return Materialize.toast(
-          'Password must be at least 7 characters long',
-          3000
-        );
-      }
 
       const options = {
         contentType: 'application/json',
@@ -59,12 +38,11 @@ $(document).ready(function() {
 
       $.ajax(options)
         .done(() => {
-          window.location.href = 'login';
+          window.location.href = 'notes';
         })
         .fail(($xhr) => {
           Materialize.toast($xhr.responseText, 3000);
         });
     });
   })();
-
 })
