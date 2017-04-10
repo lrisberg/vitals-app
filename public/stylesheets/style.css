@@ -1,1 +1,4 @@
-
+.jumbotron {
+  background-size: cover;
+  margin: auto;
+}
