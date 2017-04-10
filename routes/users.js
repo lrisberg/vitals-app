@@ -7,7 +7,7 @@ const knex = require('../knex');
 const humps = require('humps');
 
 /* GET users listing. */
-router.post('/', (req, res, next) => {
+router.post('/users/', (req, res, next) => {
   bcrypt.hash(req.body.password, 12)
     .then((hashed_password) => {
       return knex('users')
