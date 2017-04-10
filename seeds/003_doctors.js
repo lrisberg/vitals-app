@@ -28,9 +28,27 @@ exports.seed = function(knex) {
           first_name: "Vanessa",
           last_name: "Carlton",
           email: "DrCarlton@AOL.com",
-          phone: "720-555-8932",
-          address: "27 Skidoo Blvd",
+          phone: "720-555-4444",
+          address: "28 Skidoo Blvd",
           specialty_id: 1
+        },
+        {
+          id:4,
+          first_name: "Spud",
+          last_name: "McKenzie",
+          email: "spud@AOL.com",
+          phone: "720-555-5555",
+          address: "30 Skidoo Blvd",
+          specialty_id: 6
+        },
+        {
+          id:5,
+          first_name: "Clara",
+          last_name: "Higgins",
+          email: "drhiggins@AOL.com",
+          phone: "720-555-6666",
+          address: "50 Skidoo Blvd",
+          specialty_id: 7
         }
       ]);
     })

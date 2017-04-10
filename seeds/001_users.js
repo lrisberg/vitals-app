@@ -28,7 +28,7 @@ exports.seed = function(knex) {
           height: 20,
           weight: 40,
         },
-
+        {
         id:3,
         first_name: "Mike",
         last_name: "Nolan",

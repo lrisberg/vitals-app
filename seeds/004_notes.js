@@ -10,9 +10,7 @@ exports.seed = function(knex) {
           id: 1,
           user_id: 1,
           doctor_id: 1,
-          body: "He kept saying 'That's what she said' over and over.",
-          created_at: 
-          updated_at:
+          body: "He kept saying 'That's what she said' over and over."
         },
         {
           id: 2,
@@ -43,7 +41,7 @@ exports.seed = function(knex) {
           user_id: 3,
           doctor_id: 5,
           body: "The doctor gave me a lollypop!"
-        },
+        }
       ]);
     })
     .then(() => {
