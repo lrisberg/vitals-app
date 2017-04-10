@@ -1,4 +1,10 @@
-.jumbotron {
-  background-size: cover;
-  margin: auto;
+.carousel {
+  display: block;
+  max-width: 80%;
+  background-size: contain;
+  background-position: center;
+}
+
+.container-fluid {
+  font-family: 'Pacifico', cursive;
 }
