@@ -10,6 +10,7 @@ var users = require('./routes/users');
 var auth = require('./routes/auth');
 var token = require('./routes/token');
 var dashboard = require('./routes/dashboard');
+var notes = require('./routes/notes');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use('/', users);
 app.use('/', auth);
 app.use('/', token);
 app.use('/', dashboard);
+app.use('/', notes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
