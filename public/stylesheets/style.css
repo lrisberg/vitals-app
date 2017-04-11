@@ -2,6 +2,7 @@
 
 
 
+
 .jumbotron {
   background-size: cover;
   margin: auto;
@@ -11,6 +12,7 @@
   background-size:cover;
   height: 700px;
   background-position: left;
+  background-repeat: no-repeat;
 }
 .header {
   font-family: 'Lato', sans-serif;
@@ -28,14 +30,46 @@
 .navbar {
   background-color: rgb(238, 237, 72);
 
-
 }
+
 .navbar-custom { margin : 0};
 
 .navbar-fixed-bottom {
   background-color: rgb(238, 237, 72);
 }
 
+#slides {
+  overflow: hidden;
+  margin-left: 200px;
+ width: 70%;
+  height: 120px;
+ }
+
+ #slides ul {
+  list-style: none;
+   width: 100%;
+   height: 250px;
+   margin: 0;
+   padding: 0;
+   position: relative;
+
+ }
+
+ #slides li {
+   width: 100%;
+   height: 140px;
+   float: left;
+   text-align: center;
+   position: relative;
+   font-family: lato, sans-serif;
+   font-size: 24px;
+   position: relative;
+
+ }
+
+ .lobster {
+   color:white;
+ }
 
 
 
