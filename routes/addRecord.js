@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/addDoc', function(req, res, next) {
-  res.render('addDoc');
+router.get('/addRecord', function(req, res, next) {
+  res.render('addRecord');
 });
 
 module.exports = router;

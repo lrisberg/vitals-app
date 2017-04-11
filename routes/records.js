@@ -25,16 +25,16 @@ function checkAuth(req, res, next) {
 }
 
 /* GET home page. */
-router.get('/categories', checkAuth, (req, res, next) => {
-  knex('categories')
+router.get('/records', checkAuth, (req, res, next) => {
+  knex('records')
     .where('user_id', req.user.userId)
-    .then((categoriesFromKnex) => {
-      res.render('categories', { categories: categoriesFromKnex });
+    .then((recordsFromKnex) => {
+      res.render('records', { records: recordsFromKnex });
     })
 });
 
-router.patch('/categories', checkAuth, (req, res, next) => {
-  knex('categories')
+router.patch('/records', checkAuth, (req, res, next) => {
+  knex('records')
 })
 
 module.exports = router;

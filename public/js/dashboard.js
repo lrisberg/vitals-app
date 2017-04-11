@@ -1,7 +1,7 @@
 $(document).ready(() => {
   (function() {
     const logout = $('#logoutButton');
-    const myCategories = $('#categoriesButton');
+    const myRecords = $('#recordsButton');
 
     logout.click(function(event) {
 
@@ -20,8 +20,8 @@ $(document).ready(() => {
         });
     })
 
-    myCategories.click(function(event) {
-      window.location.href = '/categories';
+    myRecords.click(function(event) {
+      window.location.href = '/records';
     });
 
   })();
