@@ -29,7 +29,7 @@ html,
      #footer {
        height: 60px;
      }
-    
+
 
      /* Lastly, apply responsive CSS fixes as necessary */
      @media (max-width: 767px) {
@@ -45,13 +45,6 @@ html,
 
 .menu{
   font-size: 38px;
-}
-
-
-.caro {
-  margin-top: -20px;
-  height:100%;
-
 }
 
 .signup {

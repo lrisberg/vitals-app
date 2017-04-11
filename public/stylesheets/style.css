@@ -31,3 +31,37 @@
 .navbar-fixed-bottom {
   background-color: rgb(238, 237, 72);
 }
+
+.caro {
+  margin-top: -38px;
+  height:100%;
+
+}
+
+.thumbnail>img{
+  height:200px;
+  width:200px;
+}
+
+.doContainer {
+  margin-left: 30px;
+}
+
+hr.style17 {
+	border-top: 15px solid #007299;
+	text-align: center;
+  margin-top: -20px;
+}
+hr.style17:after {
+
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	/*color: #8c8b8b;*/
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
