@@ -24,6 +24,12 @@ function checkAuth(req, res, next) {
   }
 }
 
+function notFound(res) {
+  res.setHeader("Content-Type", "text/plain");
+  res.status(404);
+  res.send('Not Found');
+}
+
 /* GET home page. */
 router.get('/notes', checkAuth, (req, res, next) => {
   console.log(req.user.userId);
@@ -36,11 +42,22 @@ router.get('/notes', checkAuth, (req, res, next) => {
 
 router.get('/notes/:id', checkAuth, (req, res, next) => {
   const id = req.params.id
+
+  if (isNaN(parseInt(id))) {
+    notFound(res);
+    return;
+  }
+
   knex('notes')
     .where('id', id)
-    .then((note) => {
-      console.log(note[0])
-      res.render('notes', { note: note[0]});
+    .then((notes) => {
+      if (notes.length === 0) {
+        notFound(res);
+        return;
+      }
+
+      console.log(notes[0])
+      res.render('notes', { notes: notes } );
     })
 });
 
