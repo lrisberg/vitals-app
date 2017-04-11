@@ -34,4 +34,14 @@ router.get('/notes', checkAuth, (req, res, next) => {
     })
 });
 
+router.get('/notes/:id', checkAuth, (req, res, next) => {
+  const id = req.params.id
+  knex('notes')
+    .where('id', id)
+    .then((note) => {
+      console.log(note[0])
+      res.render('notes', { note: note[0]});
+    })
+});
+
 module.exports = router;
