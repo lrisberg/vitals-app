@@ -9,7 +9,6 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
 var token = require('./routes/token');
-var dashboard = require('./routes/dashboard');
 var notes = require('./routes/notes');
 var records = require('./routes/records')
 var addRecord = require('./routes/addRecord')
@@ -33,7 +32,6 @@ app.use('/', index);
 app.use('/', users);
 app.use('/', auth);
 app.use('/', token);
-app.use('/', dashboard);
 app.use('/', notes);
 app.use('/', records)
 app.use('/', addRecord)
