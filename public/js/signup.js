@@ -1,6 +1,7 @@
 $(document).ready(function() {
   (function() {
     'use strict';
+    console.log("hi!!")
 
     // $('.button-collapse').sideNav();
 
@@ -35,7 +36,7 @@ $(document).ready(function() {
       };
 
       $.ajax(options)
-        .done(() => {
+        .done((options) => {
           window.location.href = 'records';
         })
         .fail(($xhr) => {
