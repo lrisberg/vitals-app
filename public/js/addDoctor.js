@@ -5,7 +5,7 @@ $(document).ready(function() {
     // $('.button-collapse').sideNav();
 
     // eslint-disable-next-line max-statements
-    $('#signUpForm').submit((event) => {
+    $('#addADoc').submit((event) => {
       event.preventDefault();
 
       const firstName = $('#firstName').val().trim();
@@ -13,7 +13,7 @@ $(document).ready(function() {
       const email = $('#email').val().trim();
       const phone = $('#phone').val().trim();
       const address = $('#address').val().trim();
-      const specialty = $('specialty').val();
+      const specialties = $('specialty').attr('spec-id').val();
 
       const options = {
         contentType: 'application/json',
@@ -21,15 +21,13 @@ $(document).ready(function() {
           firstName,
           lastName,
           email,
-          password,
-          age,
-          gender,
-          height,
-          weight
+          phone,
+          address,
+          specialties
         }),
         dataType: 'json',
         type: 'POST',
-        url: '/users'
+        url: '/doctors'
       };
 
       $.ajax(options)
