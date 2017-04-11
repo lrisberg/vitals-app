@@ -76,7 +76,7 @@ router.post('/notes', checkAuth, (req, res, next) => {
     })
     .then(() => {
       res.status(200);
-      res.send('Inserted a note');
+      res.send('');
     })
 })
 
