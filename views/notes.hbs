@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Notes</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1>Notes</h1>
 
     {{#each notes}}
-    <h1>
+        <h1>
     {{this.body}}
   </h1>
-  {{/each}}
+    {{/each}}
+
+    <h1>Add a new note:</h1>
+    <form>
+        <textarea id="addNote" rows="4" cols="50"></textarea>
+        <input type="submit" value="Submit">
+    </form>
 
 
+</body>
 
-
-  </body>
 </html>
