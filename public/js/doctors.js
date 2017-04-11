@@ -8,6 +8,7 @@ $(document).ready(() => {
       window.location.href = '/addDoc';
     });
 
+    $()
 
   })();
 })
