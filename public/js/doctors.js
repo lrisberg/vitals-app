@@ -1,9 +1,12 @@
 $(document).ready(() => {
   (function() {
 
-    $('.addnote').click(event) {
-      
-    }
+    const addDoc = $('#addDoc')
+
+    addDoc.click(function(event) {
+      console.log('Hey!')
+      window.location.href = '/addDoc';
+    });
 
 
   })();

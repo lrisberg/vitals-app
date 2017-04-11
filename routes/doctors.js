@@ -34,4 +34,8 @@ router.get('/doctors', checkAuth, (req, res, next) => {
     })
 });
 
+router.patch('/doctors', checkAuth, (req, res, next) => {
+  knex('doctors')
+})
+
 module.exports = router;

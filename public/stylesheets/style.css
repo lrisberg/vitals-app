@@ -66,6 +66,15 @@ hr.style17:after {
 	transform: rotate(60deg);
 }
 
+.addDoc {
+  /*border-radius: 25px;*/
+}
+.addDoctor {
+  background-image: url('https://www.steward.org/sites/default/files/stock%20doctors.png');
+  background-size:cover;
+  background-position: left;
+}
+
 
 
 

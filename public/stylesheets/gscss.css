@@ -4,6 +4,10 @@
 .name{
   font-size: 20px;
 }
-.shelf{
-  height: 400px
+.thumbnail{
+  height:250px
+}
+.pict{
+  height: 200px;
+  width: 200px;
 }
