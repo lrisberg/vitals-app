@@ -11,8 +11,13 @@ var auth = require('./routes/auth');
 var token = require('./routes/token');
 var dashboard = require('./routes/dashboard');
 var notes = require('./routes/notes');
+<<<<<<< HEAD
 var doctors = require('./routes/doctors')
 var addCategory = require('./routes/addCategory')
+=======
+var categories = require('./routes/categories')
+var addDoc = require('./routes/addDoc')
+>>>>>>> bfeebd596c9de40030d720ef8000ad7282257b41
 
 var app = express();
 
@@ -34,8 +39,13 @@ app.use('/', auth);
 app.use('/', token);
 app.use('/', dashboard);
 app.use('/', notes);
+<<<<<<< HEAD
 app.use('/', doctors)
 app.use('/', addCategory)
+=======
+app.use('/', categories)
+app.use('/', addDoc)
+>>>>>>> bfeebd596c9de40030d720ef8000ad7282257b41
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
