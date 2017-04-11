@@ -88,7 +88,8 @@
         {{#each doctors}}
           <div class="col-sm-6 col-md-4 ">
                 <div class="thumbnail">
-                  <img height='200px' width='200px' src="{{this.logo}}" alt="...">
+                  <!-- height='200px' width='200px' inside img src -->
+                  <img  src="{{this.logo}}" alt="...">
                   <div class="caption">
 
                       <h3>{{this.first_name}} {{this.last_name}},{{this.name}}</h3>

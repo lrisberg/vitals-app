@@ -13,6 +13,7 @@ var dashboard = require('./routes/dashboard');
 var notes = require('./routes/notes');
 var doctors = require('./routes/doctors')
 
+
 var app = express();
 
 // view engine setup
@@ -34,6 +35,7 @@ app.use('/', token);
 app.use('/', dashboard);
 app.use('/', notes);
 app.use('/', doctors)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
