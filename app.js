@@ -11,7 +11,7 @@ var auth = require('./routes/auth');
 var token = require('./routes/token');
 var dashboard = require('./routes/dashboard');
 var notes = require('./routes/notes');
-var doctors = require('./routes/doctors')
+var categories = require('./routes/categories')
 var addDoc = require('./routes/addDoc')
 
 var app = express();
@@ -34,7 +34,7 @@ app.use('/', auth);
 app.use('/', token);
 app.use('/', dashboard);
 app.use('/', notes);
-app.use('/', doctors)
+app.use('/', categories)
 app.use('/', addDoc)
 
 // catch 404 and forward to error handler
