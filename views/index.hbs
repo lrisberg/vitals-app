@@ -19,6 +19,9 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="stylesheets/style.css">
 
+    <script type="text/javascript" src="/js/login.js">
+
+    </script>
 
 
     <title>Style Guide</title>
@@ -65,12 +68,12 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-right" role="search">
+          <form id="logInForm" class="navbar-form navbar-right" role="search">
            <div class="form-group">
-               <input type="email" class="form-control" name="username" placeholder="email">
+               <input id="loginEmail" type="email" class="form-control" name="username" placeholder="email">
            </div>
            <div class="form-group">
-               <input type="password" class="form-control" name="password" placeholder="Password">
+               <input id="loginPassword" type="password" class="form-control" name="password" placeholder="Password">
            </div>
            <button type="submit" class="btn btn-default">Log In</button>
 
