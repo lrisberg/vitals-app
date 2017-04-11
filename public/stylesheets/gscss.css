@@ -4,6 +4,10 @@
 .name{
   font-size: 20px;
 }
-.aboutpage{
-  background-image: url('./assets/images/ekg.jpg');
+.thumbnail{
+  height:250px
+}
+.pict{
+  height: 200px;
+  width: 200px;
 }
