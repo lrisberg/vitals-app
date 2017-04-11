@@ -11,11 +11,9 @@ $(document).ready(function() {
       const firstName = $('#firstName').val().trim();
       const lastName = $('#lastName').val().trim();
       const email = $('#email').val().trim();
-      const password = $('#password').val();
-      const age = $('#age').val().trim();
-      const height = $('#height').val().trim();
-      const gender = $('#gender').val().trim();
-      const weight = $('#weight').val().trim();
+      const phone = $('#phone').val().trim();
+      const address = $('#address').val().trim();
+      const specialty = $('specialty').val();
 
       const options = {
         contentType: 'application/json',

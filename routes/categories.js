@@ -25,13 +25,16 @@ function checkAuth(req, res, next) {
 }
 
 /* GET home page. */
-router.get('/doctors', checkAuth, (req, res, next) => {
-  knex('doctors')
-    .join('specialties', 'specialties.id', 'specialty_id')
+router.get('/categories', checkAuth, (req, res, next) => {
+  knex('categories')
     .where('user_id', req.user.userId)
-    .then((doctorsFromKnex) => {
-      res.render('doctors', { doctors: doctorsFromKnex });
+    .then((categoriesFromKnex) => {
+      res.render('categories', { categories: categoriesFromKnex });
     })
 });
+
+router.patch('/categories', checkAuth, (req, res, next) => {
+  knex('categories')
+})
 
 module.exports = router;
