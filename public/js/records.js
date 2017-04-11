@@ -12,8 +12,7 @@ $(document).ready(() => {
 
       let recordId = $(event.target).attr('id')
 
-      window.location.href = '/notes';
-      //window.location.href = '`/notes/${recordId}`';
+      window.location.href = `/notes/${recordId}`;
     })
     const logout = $('#logoutButton');
     const myRecords = $('#recordsButton');
