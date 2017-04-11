@@ -4,6 +4,6 @@
 .name{
   font-size: 20px;
 }
-.aboutpage{
-  background-image: url('./assets/images/ekg.jpg');
+.shelf{
+  height: 400px
 }
