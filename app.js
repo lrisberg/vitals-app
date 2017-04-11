@@ -9,10 +9,9 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var auth = require('./routes/auth');
 var token = require('./routes/token');
-var dashboard = require('./routes/dashboard');
 var notes = require('./routes/notes');
-var categories = require('./routes/categories')
-var addCategory = require('./routes/addCategory')
+var records = require('./routes/records')
+var addRecord = require('./routes/addRecord')
 
 
 var app = express();
@@ -33,10 +32,9 @@ app.use('/', index);
 app.use('/', users);
 app.use('/', auth);
 app.use('/', token);
-app.use('/', dashboard);
 app.use('/', notes);
-app.use('/', categories)
-app.use('/', addCategory)
+app.use('/', records)
+app.use('/', addRecord)
 
 
 // catch 404 and forward to error handler

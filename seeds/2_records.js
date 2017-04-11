@@ -1,10 +1,10 @@
 
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('categories').del()
+  return knex('records').del()
     .then(function () {
       // Inserts seed entries
-      return knex('categories').insert([
+      return knex('records').insert([
         {
           id: 1,
           user_id: 1,
@@ -91,6 +91,6 @@ exports.seed = function(knex) {
       ]);
     })
     .then(() => {
-      return knex.raw("SELECT setval('categories_id_seq', (SELECT MAX(id) FROM categories));");
+      return knex.raw("SELECT setval('records_id_seq', (SELECT MAX(id) FROM records));");
     });
 };

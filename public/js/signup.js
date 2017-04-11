@@ -1,6 +1,7 @@
 $(document).ready(function() {
   (function() {
     'use strict';
+    console.log("hi!!")
 
     // $('.button-collapse').sideNav();
 
@@ -35,8 +36,8 @@ $(document).ready(function() {
       };
 
       $.ajax(options)
-        .done(() => {
-          window.location.href = 'dashboard';
+        .done((options) => {
+          window.location.href = 'records';
         })
         .fail(($xhr) => {
           Materialize.toast($xhr.responseText, 3000);
