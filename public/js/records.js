@@ -15,6 +15,25 @@ $(document).ready(() => {
       window.location.href = '/notes';
       //window.location.href = '`/notes/${recordId}`';
     })
+    const logout = $('#logoutButton');
+    const myRecords = $('#recordsButton');
+
+    logout.click(function(event) {
+
+      const options = {
+        dataType: 'json',
+        type: 'DELETE',
+        url: '/token'
+      };
+
+      $.ajax(options)
+        .done(() => {
+          window.location.href = '/index';
+        })
+        .fail(() => {
+          window.location.href = '/';
+        });
+    })
 
   })();
 })
