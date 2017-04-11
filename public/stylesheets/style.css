@@ -71,11 +71,23 @@
    color:white;
  }
 
-
-
-
 .caro {
   margin-top: -38px;
+}
+
+.item {
+  height:auto;
+}
+.tales {
+  width: 100%;
+
+}
+
+.carousel-inner{
+
+  width:100%;
+  max-height: 500px !important;
+
 }
 
 
@@ -95,9 +107,6 @@
 }
 
 /*<---->*/
-
-
-
 
 .thumbnail>img{
   height:200px;
