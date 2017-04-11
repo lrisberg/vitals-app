@@ -14,6 +14,7 @@ var notes = require('./routes/notes');
 var categories = require('./routes/categories')
 var addCategory = require('./routes/addCategory')
 
+
 var app = express();
 
 // view engine setup
@@ -36,6 +37,7 @@ app.use('/', dashboard);
 app.use('/', notes);
 app.use('/', categories)
 app.use('/', addCategory)
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

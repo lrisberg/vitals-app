@@ -1,4 +1,8 @@
 
+/*body {
+  max-height: 100%;
+}*/
+
 
 .jumbotron {
   background-size: cover;
@@ -32,11 +36,19 @@
   background-color: rgb(238, 237, 72);
 }
 
+
+
+
 .caro {
   margin-top: -38px;
-  height:100%;
-
 }
+
+
+
+
+
+
+
 
 .thumbnail>img{
   height:200px;
@@ -76,6 +88,9 @@ hr.style17:after {
 }
 
 
+.menu{
+  font-size: 38px;
+}
 
 
 
