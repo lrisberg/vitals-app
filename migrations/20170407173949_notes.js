@@ -8,9 +8,9 @@ exports.up = function(knex) {
       .notNullable()
       .onDelete('CASCADE');
     table
-      .integer('category_id')
+      .integer('record_id')
       .references('id')
-      .inTable('categories')
+      .inTable('records')
       .notNullable()
       .onDelete('CASCADE');
     table.text('body').notNullable();
