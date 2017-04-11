@@ -12,7 +12,7 @@ var token = require('./routes/token');
 var dashboard = require('./routes/dashboard');
 var notes = require('./routes/notes');
 var doctors = require('./routes/doctors')
-var addDoc = require('./routes/addDoc')
+var addCategory = require('./routes/addCategory')
 
 var app = express();
 
@@ -35,7 +35,7 @@ app.use('/', token);
 app.use('/', dashboard);
 app.use('/', notes);
 app.use('/', doctors)
-app.use('/', addDoc)
+app.use('/', addCategory)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
