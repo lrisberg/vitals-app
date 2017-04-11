@@ -32,11 +32,12 @@ function notFound(res) {
 
 /* GET home page. */
 router.get('/notes', checkAuth, (req, res, next) => {
-  console.log(req.user.userId);
   knex('notes')
     .where('user_id', req.user.userId)
     .then((notesFromKnex) => {
-      res.render('notes', { notes: notesFromKnex });
+      res.render('notes', {
+        notes: notesFromKnex
+      });
     })
 });
 
@@ -57,8 +58,26 @@ router.get('/notes/:id', checkAuth, (req, res, next) => {
       }
 
       console.log(notes[0])
-      res.render('notes', { notes: notes } );
+      res.render('notes', {
+        notes: notes
+      });
     })
 });
+
+router.post('/notes', checkAuth, (req, res, next) => {
+
+  let noteBody = req.body.noteBody;
+
+  knex('notes')
+    .insert({
+      user_id: req.user.userId,
+      doctor_id: req.user.userId,
+      body: noteBody,
+    })
+    .then(() => {
+      res.status(200);
+      res.send('Inserted a note');
+    })
+})
 
 module.exports = router;
