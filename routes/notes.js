@@ -39,8 +39,8 @@ router.get('/notes/:id', checkAuth, (req, res, next) => {
   knex('notes')
     .where('id', id)
     .then((note) => {
-      console.log(note[0])
-      res.render('notes', { note: note[0]});
+      console.log(note)
+      res.render('notes', { notes: note[0]});
     })
 });
 
