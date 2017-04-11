@@ -1,7 +1,5 @@
 
-/*body {
-  max-height: 100%;
-}*/
+
 
 
 .jumbotron {
@@ -29,6 +27,8 @@
 }
 .navbar {
   background-color: rgb(238, 237, 72);
+
+
 }
 .navbar-custom { margin : 0};
 
@@ -39,13 +39,28 @@
 
 
 
+
 .caro {
   margin-top: -38px;
 }
 
 
+/*about page*/
+.panel-footer.panel-custom{
+  background-color: rgb(238, 237, 72);
+}
+.name{
+  font-size: 20px;
+}
+.thumbnail{
+  height:250px
+}
+.pict{
+  height: 200px;
+  width: 200px;
+}
 
-
+/*<---->*/
 
 
 
@@ -59,12 +74,32 @@
   margin-left: 30px;
 }
 
+
 hr.style17 {
-	border-top: 15px solid #007299;
+	border-top: 12px solid #007299;
 	text-align: center;
   margin-top: -20px;
 }
 hr.style17:after {
+
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	/*color: #8c8b8b;*/
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+hr.style18 {
+	border-top: 12px solid #007299;
+	text-align: center;
+  margin-top: -20px;
+}
+hr.style18:after {
 
 	display: inline-block;
 	position: relative;
