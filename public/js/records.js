@@ -5,7 +5,7 @@ $(document).ready(() => {
 
     addDoc.click(function(event) {
       console.log('Hey!')
-      window.location.href = '/addCategory';
+      window.location.href = '/addRecord';
     });
 
     $()
