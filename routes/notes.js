@@ -38,6 +38,7 @@ router.get('/notes/:id', checkAuth, (req, res, next) => {
   const id = req.params.id
   knex('notes')
     .where('id', id)
+    // .join('doctors', 'doctors.id', 'doctor_id')
     .then((note) => {
       console.log(note)
       res.render('notes', { notes: note[0]});
