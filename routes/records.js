@@ -33,6 +33,10 @@ router.get('/records', checkAuth, (req, res, next) => {
     })
 });
 
+router.get('/records/add', checkAuth, (req, res, next) => {
+  res.render('recordAdd');
+})
+
 router.get('/records/:recordId', checkAuth, (req, res, next) => {
   const recordId = req.params.recordId;
 
