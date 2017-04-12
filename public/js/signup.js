@@ -1,6 +1,7 @@
 $(document).ready(function() {
   (function() {
     'use strict';
+    console.log('hello from signup')
 
     // $('.button-collapse').sideNav();
 
@@ -39,7 +40,6 @@ $(document).ready(function() {
           window.location.href = 'records';
         })
         .fail(($xhr) => {
-          Materialize.toast($xhr.responseText, 3000);
         });
     });
   })();
