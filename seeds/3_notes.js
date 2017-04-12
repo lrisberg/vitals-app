@@ -36,7 +36,7 @@ exports.seed = function(knex, Promise) {
         },
         {
           id: 7,
-          record_id: 12,
+          record_id: 11,
           body: "I was prescribed some drugs."
         },
         {
