@@ -39,8 +39,8 @@
   {{/each}} -->
 
 
-      <!-- <nav class="navbar navbar-light">
-          <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;"> -->
+      <nav class="navbar navbar-light">
+          <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
               <!-- Brand and toggle get grouped for better mobile display -->
               <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -53,7 +53,7 @@
     </div> -->
 
               <!-- Collect the nav links, forms, and other content for toggling -->
-              <!-- <div class="collapse navbar-collapse">
+              <div class="collapse navbar-collapse">
                   <ul class="nav navbar-left">
 
                       <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='menu '><span class="glyphicon glyphicon-th-list"></span></a>
@@ -70,60 +70,25 @@
                   <div class="nav navbar-nav navbar-right">
              <button type="submit"  id="logoutButton"class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
                   </div>
-              </div> -->
-              <!-- /.navbar-collapse -->
-          <!-- </div> -->
-          <!-- /.container-fluid -->
-      <!-- </nav> -->
-
-      <header>
-    		<div class="container headClass">
-    			<div class="row">
-    				<div class="col-md-6">
-    					<a href="#" class="logo"><img  class="ricky" src="images/logo1.png" width =30% height=15% alt="Third slide"></a>
-    				</div>
-    				<div class="col-md-6 text-right">
-
-              <div class="nav navbar-nav navbar-right ">
-                  <li class="navbar-brand signUpBut"><a href="/">Log Out!<span class="sr-only"></span></a></li>
               </div>
+              <!-- /.navbar-collapse -->
           </div>
+          <!-- /.container-fluid -->
+      </nav>
+      <hr class="style17 nav">
+      <br>
+      <br>
 
 
 
-              <!-- <ul class="nav navbar-nav navbar-right">
-                <form class="navbar-form navbar-right" role="search">
-
-                 <div class="form-group">
-                     <input type="email" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="username" placeholder="email">
-                 </div>
-                 <div class="form-group">
-                     <input type="password" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="password" placeholder="Password">
-                 </div>
-                 <button type="submit" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log In</button>
-
-
-
-
-             </form>
-
-
-              </ul> -->
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-
-
+    <br>
 <div class="container" >
     <div class="row">
       <h1 class="text-center">Medical Records</h1>
-      <br>
         <div class="row">
         {{#each records}}
-
-          <div class="col-sm-4 ">
-                <div class="service thumbnail">
+          <div class="col-sm-6 col-md-4 ">
+                <div class="thumbnail">
                   <img height='200px' width='200px' src="{{this.picture}}" alt="...">
                   <div class="caption text-center">
                   <!-- height='200px' width='200px' inside img src -->
@@ -153,36 +118,35 @@
               </div>
 
           </div>
+
+        <!-- <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="http://www.refluxmd.com/wp-content/uploads/2012/12/GERD-pathology-lab-results.jpg" alt="...">
+                <div class="caption">
+                    <h3>Pathologist</h3>
+                    <button class="bttn-unite bttn-md bttn-primary addnote">Add Notes</button>
+                    <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="https://vcaredentalclinic.files.wordpress.com/2014/10/url.jpg" alt="...">
+                <div class="caption">
+                    <h3>Dentist</h3>
+                    <button class="bttn-unite bttn-md bttn-primary addnote">Add Notes</button>
+                    <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
     </div>
   </div>
 </div>
 
 </body>
-<footer>
-  <div class="wrap-footer">
-    <div class="container">
-      <!-- <div class="row"> -->
-
-      <ul>
-        <li><a href="/about.html">Development Team</a></li>
-        <li><h7>Privacy</h7></li>
-        <li><h7>Legal</h7></li>
-        <li><h7>© 2017 Vitals Development Group</h7></li>
-
-
-      </ul>
-
-        <!-- </div>
-      </div> -->
-    </div>
-  </div>
-<<<<<<< HEAD
-</footer>
-<script src="/js/records.js"></script>
-=======
-</div>
-
-</body>
->>>>>>> 33ec4ff5437a7fcc3c939244e0c4f074105a38fd
 
 </html>

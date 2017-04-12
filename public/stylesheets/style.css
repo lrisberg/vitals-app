@@ -95,9 +95,9 @@
 .name{
   font-size: 20px;
 }
-.thumbnail{
+/*.thumbnail{
   height:auto;
-}
+}*/
 .pict{
   height: 200px;
   width: 200px;
@@ -167,6 +167,10 @@ hr.style18:after {
   font-size: 38px;
 }
 
+
+#passwordHelpBlock {
+  font-size: 12px;
+}
 
 
 /*Buttons on Doctor Page CSS*/
