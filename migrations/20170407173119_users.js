@@ -7,8 +7,8 @@ exports.up = function(knex) {
     table.specificType('hashed_password', 'char(60)').notNullable();
     table.integer('age');
     table.string('gender');
-    table.integer('height');
-    table.decimal('weight');
+    table.string('height');
+    table.string('weight');
     table.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
     table.timestamp('updated_at').notNullable().defaultTo(knex.raw('now()'));
   })
