@@ -10,7 +10,8 @@ var users = require('./routes/users');
 var auth = require('./routes/auth');
 var token = require('./routes/token');
 var notes = require('./routes/notes');
-var records = require('./routes/records')
+var records = require('./routes/records');
+var about = require('./routes/about');
 
 
 var app = express();
@@ -32,7 +33,8 @@ app.use('/', users);
 app.use('/', auth);
 app.use('/', token);
 app.use('/', notes);
-app.use('/', records)
+app.use('/', records);
+app.use('/', about);
 
 
 // catch 404 and forward to error handler
