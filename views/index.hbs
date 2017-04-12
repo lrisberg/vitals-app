@@ -15,6 +15,8 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<meta name="google-signin-client_id" content="895327092315-84942ut9ok6ugi979dshfo2b8ch40sto.apps.googleusercontent.com">
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -28,6 +30,25 @@
 </head>
 
 <body>
+  <script>
+  function onSuccess(googleUser) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  }
+  function onFailure(error) {
+    console.log(error);
+  }
+  function renderButton() {
+    gapi.signin2.render('my-signin2', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+  }
+</script>
 
         <nav class="navbar navbar-light">
             <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
@@ -60,6 +81,7 @@
 
 
         <ul class="nav navbar-nav navbar-right">
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
           <form id="logInForm" class="navbar-form navbar-right" role="search">
            <div class="form-group">
                <input id="loginEmail" type="email" class="form-control" name="username" placeholder="email">
