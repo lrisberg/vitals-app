@@ -24,4 +24,23 @@ $(document).ready(() => {
         console.log('FAIL');
       });
   });
+
+  $('.deleteNoteButton').click((event) => {
+    let noteId = $(event.target).attr('value');
+    console.log(noteId);
+
+    var request = {
+      dataType: 'text',
+      type: 'DELETE',
+      url: `/notes/${noteId}`
+    };
+
+    $.ajax(request)
+      .done(() => {
+        window.location.reload();
+      })
+      .fail(() => {
+        console.log('FAIL');
+      })
+  })
 })

@@ -46,4 +46,17 @@ router.post('/notes', checkAuth, (req, res, next) => {
     })
 })
 
+router.delete('/notes/:id', checkAuth, (req, res, next) => {
+
+  let id = req.params.id;
+
+  knex('notes')
+    .where('id', id)
+    .del()
+    .then(() => {
+      res.status(200);
+      res.send('');
+    });
+});
+
 module.exports = router;
