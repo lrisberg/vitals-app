@@ -59,4 +59,18 @@ router.delete('/notes/:id', checkAuth, (req, res, next) => {
     });
 });
 
+router.patch('/notes/:id', checkAuth, (req, res, next) => {
+
+  let id = req.params.id;
+
+  knex('notes')
+    .where('id', id)
+    .then((notes) => {
+      console.log(notes);
+      // res.render('noteEdit', {
+      //   notes: notes
+      // });
+    })
+})
+
 module.exports = router;
