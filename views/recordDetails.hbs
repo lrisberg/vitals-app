@@ -10,11 +10,13 @@
 
     </script>
 
-    <title>Notes</title>
+    <title>Record Details</title>
 </head>
 
 <body>
-    <h1>Notes</h1>
+    <h1>Record Details</h1>
+
+    <h3>Notes</h3>
 
     {{#each notes}}
         <h1>
@@ -25,6 +27,7 @@
     <h1>Add a new note:</h1>
     <form>
         <textarea id="noteText" rows="4" cols="50"></textarea>
+        <input id="recordId" type="hidden" name="recordId" value="{{this.recordId}}">
         <input id="addNoteButton" type="submit" value="Submit">
     </form>
 

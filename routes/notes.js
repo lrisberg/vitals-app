@@ -30,49 +30,15 @@ function notFound(res) {
   res.send('Not Found');
 }
 
-/* GET home page. */
-router.get('/notes', checkAuth, (req, res, next) => {
-  knex('notes')
-    .where('user_id', req.user.userId)
-    .then((notesFromKnex) => {
-      res.render('notes', {
-        notes: notesFromKnex
-      });
-    })
-});
-
-router.get('/notes/:id', checkAuth, (req, res, next) => {
-  const id = req.params.id
-
-  if (isNaN(parseInt(id))) {
-    notFound(res);
-    return;
-  }
-
-  knex('notes')
-    .where('id', id)
-    .then((notes) => {
-      if (notes.length === 0) {
-        notFound(res);
-        return;
-      }
-
-      console.log(notes[0])
-      res.render('notes', {
-        notes: notes
-      });
-    })
-});
-
 router.post('/notes', checkAuth, (req, res, next) => {
 
+  let recordId = req.body.recordId;
   let noteBody = req.body.noteBody;
 
   knex('notes')
     .insert({
-      user_id: req.user.userId,
-      doctor_id: req.user.userId,
-      body: noteBody,
+      record_id: recordId,
+      body: noteBody
     })
     .then(() => {
       res.status(200);
