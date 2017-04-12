@@ -47,19 +47,6 @@ $(document).ready(() => {
   $('.editNoteButton').click((event) => {
     let noteId = $(event.target).attr('value');
 
-    var request = {
-      dataType: 'text',
-      type: 'PATCH',
-      url: `/notes/${noteId}`
-    };
-
-    $.ajax(request)
-      .done(() => {
-        window.location.href = 'noteEdit';
-      })
-      .fail(() => {
-        console.log('FAIL');
-      })
+    window.location.href = `/notes/${noteId}/edit`;
   })
-
 })

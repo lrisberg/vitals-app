@@ -48,7 +48,13 @@ router.get('/records/:recordId/edit', checkAuth, (req, res, next) => {
   let recordId = req.params.recordId;
   console.log(recordId);
 
-  res.render('recordEdit');
+  knex('records')
+    .where('id', recordId)
+    .then((records) => {
+      res.render('recordEdit', {
+        record: records[0]
+      });
+    })
 })
 
 router.get('/records/:recordId', checkAuth, (req, res, next) => {
@@ -83,6 +89,31 @@ router.post('/records', checkAuth, (req, res, next) => {
     .then(() => {
       res.status(200);
       res.send('');
+    })
+})
+
+router.patch('/records/:id', checkAuth, (req, res, next) => {
+  let updatedRecord = req.body;
+  let id = req.params.id;
+
+  knex('records')
+    .where('id', id)
+    .then((records) => {
+      if (records.length === 0) {
+        notFound(res);
+      } else {
+        knex('records')
+          .where('id', id)
+          .update({
+            name: updatedRecord.name,
+            docname: updatedRecord.docname,
+            picture: updatedRecord.picture
+          })
+        .then(() => {
+          res.status(200);
+          res.send('');
+        })
+      }
     })
 })
 
