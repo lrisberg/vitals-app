@@ -17,89 +17,270 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="stylesheets/gscss.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
 
-    <title>Vitals :about</title>
+    <!-- Owl Carousel Assets -->
+        <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <title>Style Guide</title>
 </head>
-
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-light">
-            <div class="container-fluid" style=" font-family: 'Pacifico', cursive; font-size:24px;">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                    <a class="navbar-brand" style="font-size: 42px;" href="/index">Vitals</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class=""><a href="/testimonials">Testimonials<span class="sr-only"></span></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/doctor">Doctor</a></li>
-                                <li><a href="/calander">Calander</a></li>
-                                <li><a href="/dashboard">BMI</a></li>
-                                <li><a href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class=""><a href="/login">Login<span class="sr-only"></span></a></li>
-                        <li class=""><a href="/signup">Sign up<span class="sr-only"></span></a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+	<!-- /////////////////////////////////////////Top -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<a href="#" class="logo"><img src="images/logo.png" alt="Third slide"></a>
+				</div>
+				<div class="col-md-6 text-right">
+					<!-- <span>Information Service:</span></br>
+					<strong class="contact-phone"><i class="fa fa-phone"></i> 800-2345-6789</strong> -->
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header -->
+
+	<!-- /////////////////////////////////////////Navigation -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					Vitals!
+				</a>
+        <a class="navbar-brand" href="#">
+					Sign Up!
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<!-- <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="single.html">About</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="service.html">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="archive.html">Blogs</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="contact.html">Contacts</a>
+                    </li>
+				</ul> -->
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-right" role="search">
+           <div class="form-group">
+               <input type="email" class="form-control" name="username" placeholder="email">
+           </div>
+           <div class="form-group">
+               <input type="password" class="form-control" name="password" placeholder="Password">
+           </div>
+           <button type="submit" class="btn btn-default">Log In</button>
+
+
+       </form>
+
+
+        </ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="slide">
+		<div class="container">
+			<div class="row">
+				<!-- Carousel -->
+				<div id="carousel-example-generic" class="carousel slide box-shadow" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+					</ol>
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/8.2.jpg" alt="First slide">
+							<!-- Static Header -->
+						</div>
+						<div class="item">
+							<img src="images/biking.jpg" alt="Second slide">
+							<!-- Static Header -->
+						</div>
+
+
+						<div class="item ">
+							<img src="images/1.jpg" alt="Third slide">
+							<!-- Static Header -->
+						</div>
+						<div class="item">
+							<img src="images/healthy-people.jpg" alt="Fourth slide">
+							<!-- Static Header -->
+						</div>
+
+            <div class="item">
+							<img src="images/HikingPkg.jpg" alt="Fifth slide">
+							<!-- Static Header -->
+						</div>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
-        <div class="row">
-          <div class="card-deck">
-<div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="pict" src="../public/images/rx.jpeg"  alt="rx">
-                    <div class="caption">
-                        <h3>Prescriptions</h3>
-                        <button class="bttn-unite bttn-md bttn-primary">Add Notes</button>
-                        <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="pict" src="../public/images/blood.jpg" alt="blood">
-                    <div class="caption">
-                        <h3>Blood Info</h3>
-                        <button class="bttn-unite bttn-md bttn-primary">Add Notes</button>
-                        <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="pict" src="../public/images/skull.jpg" alt="Xray">
-                    <div class="caption">
-                        <h3>Xray</h3>
-                        <button class="bttn-unite bttn-md bttn-primary">Add Notes</button>
-                        <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
-                    </div>
-                </div>
-            </div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+				</div><!-- /carousel -->
+			</div>
+		</div>
+	</div>
+
+	<a id='backTop'>Back To Top</a>
+	<!-- /Back To Top -->
+
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="index-page">
+    <section class="box-content box-2 container box-style-2 box-shadow">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Welcome to Vitals!</h3>
+          <p>Ever get frustrated looking through all your records of your doctors appointments to figure out what the doctor recommended? Vitals will stop that frustration!</p>
+          <!-- <a class="btn btn-lg btn-blue box-shadow" href="#">Read More</a> -->
         </div>
       </div>
-        <footer class="navbar-default navbar-fixed-bottom">
-            <div class="container-fluid ">
-                <span>© 2017 Vitals Development Group</span>
-                <span class="col-sm-5"><a href="/about">About</a></span>
-            </div>
-        </footer>
-</body>
+    </section>
 
+		<!-- ////////////Content Box 01 -->
+		<div id="services"></div>
+		<section class="box-content container box-1">
+			<div class="row">
+				<div class="col-sm-4 ">
+					<div class="service">
+						<a href="#"><img src=""  title="icon-name"></a>
+						<h3>Keep a log of all your doctors appointments!</h3>
+						<p>EXPLAIN </p>
+						<!-- <a class="btn btn-2 btn-sm" href="#">Read More</a> -->
+					</div>
+				</div>
+				<div class="col-sm-4 ">
+					<div class="service">
+						<a href="#"><img src="" title="icon-name"></a>
+						<h3>Keep track of all your prescriptions and bloodwork!</h3>
+						<p>Explain?</p>
+						<!-- <a class="btn btn-2 btn-sm" href="#">Read More</a> -->
+					</div>
+				</div>
+				<div class="col-sm-4 ">
+					<div class="service">
+						<a href="#"><img src="" title="icon-name"></a>
+						<h3>Record your weight and height and calculate your BMI!</h3>
+						<p>Explain? </p>
+						<!-- <a class="btn btn-2 btn-sm" href="#">Read More</a> -->
+					</div>
+				</div>
+			</div>
+		</section>
+    <!-- ////////////Content Box 02 -->
+
+
+
+		<!-- ////////////Content Box 05 -->
+		<section class="box-content container box-5 box-shadow" >
+			<div id="owl-brand" class="owl-carousel">
+				<div class="row item">
+					<div class="col-md-4 text-center" >
+						<img src="http://www.famousbirthdays.com/headshots/lauren-conrad-4.jpg" class="testimonials img-circle" alt="">
+					</div>
+					<div class="col-md-8">
+						<div class="box-comment">
+							"Sometimes it's difficult to remember the doctor's orders. With Vital, I'm able to save notes from all my visits!"
+						</div>
+						<a class="author" href="#">Lauren M,Colorado</a>
+					</div>
+				</div>
+				<div class="row item">
+					<div class="col-md-4 text-center">
+						<img src="https://www.biography.com/.image/c_fill%2Ccs_srgb%2Cg_face%2Ch_300%2Cq_80%2Cw_300/MTE5NDg0MDU1MjMyMDIyMDMx/doris-roberts-9542615-1-402.jpg" class="testimonials img-circle" alt="">
+					</div>
+					<div class="col-md-8">
+						<div class="box-comment">
+							"This has made keeping up with my prescriptions so much easier. Now I know when I need to take my medication, and when I should consider getting a refill."
+						</div>
+						<a class="author" href="#">Doris L, New Mexico</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer>
+		<div class="wrap-footer">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3 col-footer footer-2">
+            <a href="about.html" class="footer-heading"><h4>Development Team</h4></a>
+
+					</div>
+					<div class="col-md-3 col-footer footer-4">
+						<div class="footer-heading"><h4>© 2017 Vitals Development Group</h4></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- <div class="coppy-right">
+		<div class="wrap-footer">
+			<div class="clearfix">
+				<div class="col-md-6 col-md-offset-3">
+					<p>Copyright @ HealthCare - <a href="http://www.365bootstrap.com" target="_blank" rel="nofollow">Bootstrap Themes</a> Designed by 365Bootstrap.com</p>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- Footer -->
+
+	<!-- Core JavaScript Files -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.backTop.min.js"></script>
+	<script>
+		$(document).ready( function() {
+			$('#backTop').backTop({
+				'position' : 1200,
+				'speed' : 500,
+				'color' : 'red',
+			});
+		});
+	</script>
+
+	<!-- carousel -->
+	<script src="owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-brand").owlCarousel({
+        autoPlay: 3000,
+        items : 1,
+		itemsDesktop : [1199,1],
+        itemsDesktopSmall : [979,2],
+		navigation: false,
+      });
+    });
+    </script>
+</body>
 </html>
