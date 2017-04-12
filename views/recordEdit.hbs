@@ -26,6 +26,7 @@
 
     <title>Edit Record</title>
 </head>
+
 <body>
     <header>
         <div class="container headClass">
@@ -38,60 +39,53 @@
           <strong class="contact-phone"><i class="fa fa-phone"></i> 800-2345-6789</strong> -->
                     <div class="nav navbar-nav navbar-right">
                         <a class="navbar-brand signUpBut " href="/signup" style="font-family: 'Palanquin Dark', sans-serif;">Sign Up!</a>
-                    </div>
-
-
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <form id="logInForm" class="navbar-form navbar-right" role="search">
-
-                            <div class="form-group">
-                                <input id="loginEmail" type="email" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="username" placeholder="email">
-                            </div>
-                            <div class="form-group">
-                                <input id="loginPassword" type="password" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="password" placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log In</button>
-
-                        </form>
+                    </div class="nav navbar-nav navbar-right">
+                    <form id="logInForm" class="navbar-form navbar-right" role="search">
+                        <div class="form-group">
+                            <input id="loginEmail" type="email" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="username" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <input id="loginPassword" type="password" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log In</button></form>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
     <div class="container">
-    <!-- Header --><br><h2>Record Edit </h2><br><br><br><br>
-    <form id="editRecordForm" method="post">
-        <input id="recordName" type="text" name="name" value="{{this.record.name}}" placeholder="Enter a name">
-        <br>
-        <input id="recordDocName" type="text" name="docName" value="{{this.record.docname}}" placeholder="Enter your doctor's name">
-        <br>
-        <input id="recordPicture" type="text" name="picture" value="{{this.record.picture}}" placeholder="Enter a URL">
-        <br>
-        <input id="recordId" type="hidden" name="id" value="{{this.record.id}}">
-        <br>
-        <button id="editRecordButton" type="submit">Submit</button>
-    </form>
-  </div>
-  <footer>
-    <div class="wrap-footer recFoot">
-      <div class="container">
-        <!-- <div class="row"> -->
-
-        <ul>
-          <li><a href="/about.html">Development Team</a></li>
-          <li><h7>Privacy</h7></li>
-          <li><h7>Legal</h7></li>
-          <li><h7>© 2017 Vitals Development Group</h7></li>
-
-
-        </ul>
-
-          <!-- </div>
-        </div> -->
-      </div>
+        <!-- Header --><br>
+        <h2>Record Edit </h2><br><br><br><br>
+        <form id="editRecordForm" method="post">
+            <input id="recordName" type="text" name="name" value="{{this.record.name}}" placeholder="Enter a name">
+            <br>
+            <input id="recordDocName" type="text" name="docName" value="{{this.record.docname}}" placeholder="Enter your doctor's name">
+            <br>
+            <input id="recordPicture" type="text" name="picture" value="{{this.record.picture}}" placeholder="Enter a URL">
+            <br>
+            <input id="recordId" type="hidden" name="id" value="{{this.record.id}}">
+            <br>
+            <button id="editRecordButton" type="submit">Submit</button>
+        </form>
     </div>
-  </footer>
+    <footer>
+        <div class="wrap-footer recFoot">
+            <div class="container">
+                <ul>
+                    <li><a href="/about.html">Development Team</a></li>
+                    <li>
+                        <h7>Privacy</h7>
+                    </li>
+                    <li>
+                        <h7>Legal</h7>
+                    </li>
+                    <li>
+                        <h7>© 2017 Vitals Development Group</h7>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
