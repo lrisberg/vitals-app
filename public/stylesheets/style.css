@@ -178,7 +178,7 @@ html {
 }
 
 .recFoot {
-
+position:absolute;
 left: 0;
 bottom: 10;
 height: 120px;
