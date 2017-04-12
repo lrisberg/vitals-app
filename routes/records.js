@@ -24,6 +24,12 @@ function checkAuth(req, res, next) {
   }
 }
 
+function notFound(res) {
+  res.setHeader("Content-Type", "text/plain");
+  res.status(404);
+  res.send('Not Found');
+}
+
 /* GET home page. */
 router.get('/records', checkAuth, (req, res, next) => {
   knex('records')
@@ -33,30 +39,43 @@ router.get('/records', checkAuth, (req, res, next) => {
     })
 });
 
-router.get('/records/:id', checkAuth, (req, res, next) => {
-  const recordId = req.params.id
+router.get('/records/add', checkAuth, (req, res, next) => {
+  res.render('recordAdd');
+})
 
-  if (isNaN(parseInt(id))) {
+router.get('/records/:recordId', checkAuth, (req, res, next) => {
+  const recordId = req.params.recordId;
+
+  if (isNaN(parseInt(recordId))) {
     notFound(res);
     return;
   }
 
   knex('notes')
-    .join('records', 'records.id', '=', 'notes.record_id')
-    .where({
-      'record_id': recordId,
-      'user_id' : req.userId
-    })
+    .where('record_id', recordId)
     .then((notes) => {
-      if (notes.length === 0) {
-        notFound(res);
-        return;
-      }
 
-      res.render(`notes/${recordId}`, {
+      res.render('recordDetails', {
+        recordId: recordId,
         notes: notes
       });
     })
 });
+
+router.post('/records', checkAuth, (req, res, next) => {
+  let newRecord = req.body;
+
+  knex('records')
+    .insert({
+      name: newRecord.name,
+      docname: newRecord.docname,
+      picture: newRecord.picture,
+      user_id: req.user.userId
+    })
+    .then(() => {
+      res.status(200);
+      res.send('');
+    })
+})
 
 module.exports = router;

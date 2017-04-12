@@ -15,19 +15,40 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+<meta name="google-signin-client_id" content="895327092315-84942ut9ok6ugi979dshfo2b8ch40sto.apps.googleusercontent.com">
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="/js/index.js"></script>
+    <script type="text/javascript" src="/js/login.js"></script>
 
-    <script type="text/javascript" src="/js/login.js">
 
-    </script>
 
 
     <title>Style Guide</title>
 </head>
 
 <body>
+  <script>
+  function onSuccess(googleUser) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  }
+  function onFailure(error) {
+    console.log(error);
+  }
+  function renderButton() {
+    gapi.signin2.render('my-signin2', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+  }
+</script>
 
         <nav class="navbar navbar-light">
             <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
@@ -56,18 +77,11 @@
         <ul class="nav navbar-nav">
           <li class=""><a href="/testimonials">Testimonials<span class="sr-only"></span></a></li>
           <li class=""><a href="/signup">Sign Up!<span class="sr-only"></span></a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/doctor">Doctor</a></li>
-              <li><a href="/calander">Calander</a></li>
-              <li><a href="/dashboard">BMI</a></li>
-              <li><a href="#">Logout</a></li>
-            </ul>
-          </li>
         </ul>
 
+
         <ul class="nav navbar-nav navbar-right">
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
           <form id="logInForm" class="navbar-form navbar-right" role="search">
            <div class="form-group">
                <input id="loginEmail" type="email" class="form-control" name="username" placeholder="email">
@@ -85,8 +99,6 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
-
 
   <hr class="style17 nav">
   <br>

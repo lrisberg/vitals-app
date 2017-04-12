@@ -11,7 +11,6 @@ var auth = require('./routes/auth');
 var token = require('./routes/token');
 var notes = require('./routes/notes');
 var records = require('./routes/records')
-var addRecord = require('./routes/addRecord')
 
 
 var app = express();
@@ -34,7 +33,6 @@ app.use('/', auth);
 app.use('/', token);
 app.use('/', notes);
 app.use('/', records)
-app.use('/', addRecord)
 
 
 // catch 404 and forward to error handler
