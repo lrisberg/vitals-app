@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap cdn -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="/js/login.js"> </script>
+    <script type="text/javascript" src="/js/signout.js"> </script>
+    <script type="text/javascript" src="/js/records.js"> </script>
+
+    <title>My Records</title>
+</head>
+
+<body>
+    <!-- <h1>My Doctors</h1>
+
+    {{#each doctors}}
+    <h1>
+    {{this.first_name}} {{this.last_name}},
+    {{this.name}}
+    <img height = 100px width=100px src = "{{this.logo}}">
+  </h1>
+  {{/each}} -->
+
+
+      <nav class="navbar navbar-light">
+          <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+    </div> -->
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse">
+                  <ul class="nav navbar-left">
+
+                      <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class='menu '><span class="glyphicon glyphicon-th-list"></span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="/doctor">My Doctors</a></li>
+                          <li><a href="/calander">My Data</a></li>
+                          <li><a href="/dashboard">BMI</a></li>
+                      </ul>
+
+                  </ul>
+
+                  <a class="nav navbar-nav" style="font-size: 42px;" href="/">Vitals</a>
+
+                  <div class="nav navbar-nav navbar-right">
+             <button type="submit"  id="logoutButton"class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
+                  </div>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container-fluid -->
+      </nav>
+      <hr class="style17 nav">
+      <br>
+      <br>
+
+
+
+    <br>
+<div class="container" >
+    <div class="row">
+      <h1 class="text-center">Medical Records</h1>
+        <div class="row">
+        {{#each records}}
+          <div class="col-sm-6 col-md-4 ">
+                <div class="thumbnail">
+                  <img height='200px' width='200px' src="{{this.picture}}" alt="...">
+                  <div class="caption text-center">
+                  <!-- height='200px' width='200px' inside img src -->
+                      <h3>{{this.name}}</h3>
+
+                      <!-- <button id="{{this.id}}" class="bttn-unite bttn-md bttn-primary notesButton">View Notes</button> -->
+
+                  </div>
+                  <button name="{{this.id}}" class="bttn-unite bttn-md bttn-primary notesButton">View Notes</button>
+                  <button name="{{this.id}}" class="bttn-unite bttn-md bttn-primary editRecordButton">Edit</button>
+                  <button name="{{this.id}}" class="bttn-unite bttn-md bttn-primary deleteRecordButton">Delete</button>
+              </div>
+
+          </div>
+          {{/each}}
+
+          <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img height='200px' width='200px' src="https://qph.ec.quoracdn.net/main-qimg-ecd8626d36eda5835df64a3c19d9bbbf" alt="...">
+                  <div class="caption text-center">
+
+                      <h3>Add Record</h3>
+
+<button type="button" class="btn btn-primary btn-lg" id="addRecord">+</button>
+
+                  </div>
+              </div>
+
+          </div>
+
+        <!-- <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="http://www.refluxmd.com/wp-content/uploads/2012/12/GERD-pathology-lab-results.jpg" alt="...">
+                <div class="caption">
+                    <h3>Pathologist</h3>
+                    <button class="bttn-unite bttn-md bttn-primary addnote">Add Notes</button>
+                    <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="https://vcaredentalclinic.files.wordpress.com/2014/10/url.jpg" alt="...">
+                <div class="caption">
+                    <h3>Dentist</h3>
+                    <button class="bttn-unite bttn-md bttn-primary addnote">Add Notes</button>
+                    <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
