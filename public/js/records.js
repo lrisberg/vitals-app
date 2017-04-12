@@ -1,6 +1,7 @@
 $(document).ready(() => {
   (function() {
 
+    console.log('hey from records');
     const addDoc = $('#addDoc')
 
     addDoc.click(function(event) {
@@ -12,26 +13,6 @@ $(document).ready(() => {
       let recordId = $(event.target).attr('name');
 
       window.location.href = `/records/${recordId}`;
-    })
-
-    const logout = $('#logoutButton');
-    const myRecords = $('#recordsButton');
-
-    logout.click(function(event) {
-
-      const options = {
-        dataType: 'json',
-        type: 'DELETE',
-        url: '/token'
-      };
-
-      $.ajax(options)
-        .done(() => {
-          window.location.href = '/index';
-        })
-        .fail(() => {
-          window.location.href = '/';
-        });
     })
 
     $('.deleteRecordButton').click((event) => {
