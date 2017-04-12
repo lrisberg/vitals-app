@@ -43,4 +43,10 @@ $(document).ready(() => {
         console.log('FAIL');
       })
   })
+
+  $('.editNoteButton').click((event) => {
+    let noteId = $(event.target).attr('value');
+
+    window.location.href = `/notes/${noteId}/edit`;
+  })
 })

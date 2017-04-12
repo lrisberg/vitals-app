@@ -19,47 +19,85 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="stylesheets/style.css">
 
-    <title>Vitals :about</title>
+    <!-- Owl Carousel Assets -->
+        <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+        <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <title>Style Guide</title>
 </head>
-
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-light">
-            <div class="container-fluid" style=" font-family: 'Pacifico', cursive; font-size:24px;">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-                    <a class="navbar-brand" style="font-size: 42px;" href="/index">Vitals</a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class=""><a href="/testimonials">Testimonials<span class="sr-only"></span></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/doctor">Doctor</a></li>
-                                <li><a href="/calander">Calander</a></li>
-                                <li><a href="/dashboard">BMI</a></li>
-                                <li><a href="#">Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class=""><a href="/login">Login<span class="sr-only"></span></a></li>
-                        <li class=""><a href="/signup">Sign up<span class="sr-only"></span></a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
+	<!-- /////////////////////////////////////////Top -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<a href="#" class="logo"><img  class="ricky" src="images/logo1.png" width =30% height=15% alt="Third slide"></a>
+				</div>
+				<div class="col-md-6 text-right">
+					<!-- <span>Information Service:</span></br>
+					<strong class="contact-phone"><i class="fa fa-phone"></i> 800-2345-6789</strong> -->
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- Header -->
+
+	<!-- /////////////////////////////////////////Navigation -->
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					Vitals!
+				</a>
+        <a class="navbar-brand" href="#">
+					Sign Up!
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<!-- <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a class="page-scroll" href="index.html">Home</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="single.html">About</a>
+                    </li>
+					<li>
+                        <a class="page-scroll" href="service.html">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="archive.html">Blogs</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="contact.html">Contacts</a>
+                    </li>
+				</ul> -->
+        <ul class="nav navbar-nav navbar-right">
+          <form class="navbar-form navbar-right" role="search">
+           <div class="form-group">
+               <input type="email" class="form-control" name="username" placeholder="email">
+           </div>
+           <div class="form-group">
+               <input type="password" class="form-control" name="password" placeholder="Password">
+           </div>
+           <button type="submit" class="btn btn-default">Log In</button>
+
+
+       </form>
+
+
+        </ul>
+			</div>
+		</div>
+	</nav>
+
         <br>
         <div class="aboutpage">
             <div class="container-fluid bg-3 text-center">
@@ -70,22 +108,20 @@
                     <div class="col-sm-3">
                         <p class="name">Lauren, CEO</p>
                         <img src="/images/Lauren.jpg" width=60% height=50% alt="Lauren">
-                        <p>Author, general knowledge practitioner, project mgmt</p>
+                        <p>Author, general knowledge practitioner, Project Mgmt</p>
                     </div>
                     <div class="col-sm-3">
                         <p class="name">John, CIO</p>
                         <img src="/images/John.jpg" width=60% height=50% alt="Image">
-                        <p>Information Specialist, refactorer
-                        </p>
+                        <p>Information Specialist, Refactorer</p>
                     </div>
                     <div class="col-sm-3">
                         <p class="name">Del</p>
                         <img src="/images/Del.jpg" width=60% height=50% alt="Image">
-                        <p>Aesthetic Intuist, Front End Mannager</p>
+                        <p>Aesthetic Intuist, Front End Manager</p>
                     </div>
                     <div class="col-sm-3">
-                        <p class="name">Gee</p>
-                        <img src="/images/Gee.jpg" width=60% height=50% alt="Image">
+                        <p class="name">Gee</p><img src="/images/Gee.jpg" width=60% height=50% alt="Image">
                         <p>Sales and Resident </p>
                     </div>
                 </div>
@@ -102,12 +138,23 @@
         </div>
         <br>
     </div>
-    <footer class="navbar-default navbar-fixed-bottom">
-        <div class="container-fluid ">
-            <span>© 2017 Vitals Development Group</span>
-            <span class="col-sm-5"><a href="/about">About</a></span>
-        </div>
-    </footer>
+    <footer>
+  		<div class="wrap-footer">
+  			<div class="container">
+  				<div class="row">
+
+  					<div class="col-md-3 col-footer footer-2">
+              <a href="about.html" class="footer-heading"><h4>Development Team</h4></a>
+
+  					</div>
+  					<div class="col-md-3 col-footer footer-4">
+  						<div class="footer-heading"><h4>© 2017 Vitals Development Group</h4></div>
+
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
 </body>
 
 </html>

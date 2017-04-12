@@ -208,14 +208,18 @@ img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
 
 h1 {font-size: 38px;}
 h2 {font-size: 36px;}
-h3 {font-size: 32px;}
+h3 {font-size: 32px; }
 h4 {font-size: 28px;}
 h5 {font-size: 24px;}
 h6 {font-size: 20px;}
 
 h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;font-weight: 600;color: #333;}
 
-p {margin: 0 0 20px; color:#816943; font-size: 24px;}
+h3{
+  font-family: 'Merriweather', serif;
+}
+
+p {margin: 0 0 20px; color:#816943; font-size: 24px; font-family: 'Merriweather', serif;}
 
 a {
    color: #666;
@@ -244,7 +248,7 @@ a:focus {color: #E84C3D;text-decoration: none;}
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------Header+Nav--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-header{background: #E84C3D;min-height: 140px;color: #fff;padding: 40px 0;}
+header{background: #E84C3D;min-height: 90px;color: #fff;padding: 40px 0;}
 header strong.contact-phone{font-size: 40px;}
 header strong.contact-phone i.fa{ margin-right: 5px;}
 header a.logo img{min-height: 70px;}
@@ -568,8 +572,4 @@ a.btn:focus{outline: 0;}
 /* ---------------------------------------------------------------------------- */
 .maps iframe{
     pointer-events: none;
-}
-
-box-2 {
-  background-color: red;
 }
