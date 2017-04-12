@@ -63,20 +63,7 @@ $(document).ready(() => {
 
       let recordId = $(event.target).attr('name');
       console.log(recordId);
-
-      var request = {
-        dataType: 'text',
-        type: 'POST',
-        url: `records/${recordId}/edit`
-      };
-
-      $.ajax(request)
-        .done(() => {
-          window.location.href = `/records/${recordId}/edit`;
-        })
-        .fail(() => {
-          console.log('FAIL');
-        })
+      window.location.href = `/records/${recordId}/edit`;
     })
 
   })();
