@@ -33,8 +33,30 @@ router.get('/records', checkAuth, (req, res, next) => {
     })
 });
 
-router.patch('/records', checkAuth, (req, res, next) => {
-  knex('records')
-})
+router.get('/records/:id', checkAuth, (req, res, next) => {
+  const recordId = req.params.id
+
+  if (isNaN(parseInt(id))) {
+    notFound(res);
+    return;
+  }
+
+  knex('notes')
+    .join('records', 'records.id', '=', 'notes.record_id')
+    .where({
+      'record_id': recordId,
+      'user_id': req.userId
+    })
+    .then((notes) => {
+      if (notes.length === 0) {
+        notFound(res);
+        return;
+      }
+
+      res.render(`notes/${recordId}`, {
+        notes: notes
+      });
+    })
+});
 
 module.exports = router;

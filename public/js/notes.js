@@ -8,6 +8,7 @@ $(document).ready(() => {
     var request = {
       contentType: 'application/json',
       data: JSON.stringify({
+        recordId: $('#recordId').val(),
         noteBody: noteBody
       }),
       dataType: 'text',
