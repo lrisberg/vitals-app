@@ -9,15 +9,19 @@
 
     <!-- bootstrap cdn -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://blackrockdigital.github.io/startbootstrap-3-col-portfolio/css/3-col-portfolio.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- <link rel="stylesheet" href="stylesheets/style.css"> -->
 
     <!-- JS -->
     <script type="text/javascript" src="/js/login.js">
@@ -39,7 +43,7 @@
 
 
       <nav class="navbar navbar-light">
-          <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
+          <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <!-- <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -86,20 +90,16 @@
       <h1 class="text-center">Medical Records</h1>
         <div class="row">
         {{#each records}}
-          <div class="col-sm-6 col-md-4 ">
-                <div class="thumbnail">
-                  <img height='200px' width='200px' src="{{this.picture}}" alt="...">
-                  <div class="caption text-center">
-                  <!-- height='200px' width='200px' inside img src -->
-                      <h3>{{this.name}}</h3>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="{{this.picture}}" alt="">
+            </a>
+            <h3>
+                <a class="notesButton" href="#">{{this.name}}</a>
+            </h3>
+            <p>{{this.docname}}</p>
+        </div>
 
-                      <!-- <button id="{{this.id}}" class="bttn-unite bttn-md bttn-primary notesButton">View Notes</button> -->
-
-                  </div>
-                  <button id="{{this.id}}" class="bttn-unite bttn-md bttn-primary notesButton">View Notes</button>
-              </div>
-
-          </div>
           {{/each}}
 
           <div class="col-sm-6 col-md-4">
