@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  console.log("hello from recAdd")
 
   $('#addRecordButton').click((event) => {
     event.preventDefault();
