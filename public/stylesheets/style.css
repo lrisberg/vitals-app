@@ -196,7 +196,7 @@ Free Responsive Html5 Templates : http://www.zerotheme.com
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
-body {font-family: 'Ek Mukta', sans-serif;color: #666;background-color: #F5F5F5;font-size: 16px;line-height: 1.6em;font-weight: 400;}
+body {font-family: 'Ek Mukta', sans-serif;color: black;background-color: #F5F5F5;font-size: 16px;line-height: 1.6em;font-weight: 400;}
 html, body {width:100%; padding:0; margin:0;}
 
 /* ---------------------------------------------------------------------------- */
@@ -216,10 +216,10 @@ h6 {font-size: 20px;}
 h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;font-weight: 600;color: #333;}
 
 h3{
-  font-family: 'Merriweather', serif;
+  font-family: 'Palanquin Dark', sans-serif;
 }
 
-p {margin: 0 0 20px; color:#816943; font-size: 24px; font-family: 'Merriweather', serif;}
+p {margin: 0 0 20px; color:#E84C3D; font-size: 24px; font-family: 'Palanquin Dark', sans-serif;}
 
 a {
    color: #666;
@@ -251,7 +251,7 @@ a:focus {color: #E84C3D;text-decoration: none;}
 header{background: #E84C3D;min-height: 90px;color: #fff;padding: 40px 0;}
 header strong.contact-phone{font-size: 40px;}
 header strong.contact-phone i.fa{ margin-right: 5px;}
-header a.logo img{min-height: 70px;}
+header a.logo img{min-height: 70px; margin-left: -152px;}
 
 .navbar-default{border: none;background-color: #fff;box-shadow: 0 5px 11px rgba(0, 0, 0, 0.05);margin-bottom: 30px;padding: 5px;font-weight: bold;font-size: 18px;}
 .navbar-default{border: none;background-color: #fff;box-shadow: 0 5px 11px rgba(0, 0, 0, 0.05);margin-bottom: 30px;padding: 5px;font-weight: bold;font-size: 18px;}
@@ -389,11 +389,11 @@ footer p,
 footer a {color: #f8f8f8;}
 footer a:hover {text-decoration: underline;color: #fff;}
 footer ul{padding: 0;}
-footer ul li{list-style:none;margin-bottom: 15px;}
+footer ul {list-style:none;margin-bottom: 15px;}
 footer ul li a{}
 footer ul li a i.fa{height: 33px; width: 33px; background: #fff; color: #E84C3D; border-radius: 50%; font-size: 18px;text-align: center;line-height: 33px;margin-right: 5px;}
 
-footer .wrap-footer {padding: 60px 50px 20px 50px;background-color: #E84C3D;}
+footer .wrap-footer {padding: 20px 20px 10px 20px;background-color: #E84C3D;}
 
 footer .col-footer{margin-bottom: 50px;}
 footer .col-footer .footer-heading{margin-bottom:25px;border-bottom: 1px solid rgba(255, 255, 255, 0.5);}
@@ -572,4 +572,13 @@ a.btn:focus{outline: 0;}
 /* ---------------------------------------------------------------------------- */
 .maps iframe{
     pointer-events: none;
+}
+
+.ricky{margin-top: -40px;
+        margin-bottom: -35px;
+      }
+
+.signUpBut {
+  font-size: 20px;
+  color:black;
 }
