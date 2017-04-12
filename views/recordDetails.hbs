@@ -3,18 +3,54 @@
 
 <head>
     <meta charset="utf-8">
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<<<<<<< HEAD
 <script type="text/javascript" src="notes.js"></script>
     <script type="text/javascript" src="/js/recordDetails.js">
+=======
 
-    </script>
+    <!-- bootstrap cdn -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <title>Record Details</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Palanquin+Dark" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+>>>>>>> 963837ba256c1c0ea578de350c1dccdb224cdace
+
+    <script src="/js/recordDetails.js" type="text/javascript"></script>
+
+
+    <title>Style Guide</title>
 </head>
 
 <body>
-    <h1>Record Details</h1>
+  <header>
+    <div class="container headClass">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="#" class="logo"><img  class="ricky" src="/images/logo1.png" width =30% height=15% alt="Third slide"></a>
+        </div>
+        <div class="col-md-6 text-right">
+
+          <div class="nav navbar-nav navbar-right">
+     <button type="submit"  id="logoutButton"class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
+          </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container" >
+    <h1>(NAME OF Record) Details</h1>
 
     <h3>Notes</h3>
 
@@ -30,10 +66,31 @@
     <form>
         <textarea id="noteText" rows="4" cols="50"></textarea>
         <input id="recordId" type="hidden" name="recordId" value="{{this.recordId}}">
+        <br>
         <input id="addNoteButton" type="submit" value="Submit">
     </form>
 
+</div>
 
-</body>
+    <br><br><br><br><br>
+    <footer>
+        <div class="wrap-footer recFoot">
+            <div class="container">
+                <ul>
+                    <li><a href="/about.html">Development Team</a></li>
+                    <li>
+                        <h7>Privacy</h7>
+                    </li>
+                    <li>
+                        <h7>Legal</h7>
+                    </li>
+                    <li>
+                        <h7>© 2017 Vitals Development Group</h7>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </body>
 
 </html>

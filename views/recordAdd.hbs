@@ -21,6 +21,7 @@
     <!-- JS -->
     <script type="text/javascript" src="/js/signout.js"> </script>
     <script type="text/javascript" src="/js/records.js"> </script>
+    <script type="text/javascript" src="/js/recordAdd.js"> </script>
 
     <title>Add Record</title>
 </head>
@@ -45,13 +46,20 @@
     <h1 class = "text-center">Add A New Record</h1>
     <br>
     <div class = "container center">
-    <form id="addRecordForm" method="post">
-      <input id="recordName" type="text" name="name" placeholder="Enter a name">
-      <br>
-      <input id="recordDocName" type="text" name="docName" placeholder="Enter your doctor's name">
-      <br><br>
+      <form id="addRecordForm" class="right" method="post">
+      <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label">Text</label>
+        <div class="col-6">
+          <input class="form-control" type="text" name="name" placeholder="Enter a name" id="recordName">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-search-input" class="col-2 col-form-label" name="docName">Search</label>
+        <div class="col-6">
+          <input class="form-control" type="text" placeholder="Enter your doctor's name" id="recordDocName">
+        </div>
+      </div>
       <button id="addRecordButton" type="submit">Submit</button>
-      <br><br>
     </form>
   </div>
   <footer>
