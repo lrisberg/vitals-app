@@ -109,7 +109,7 @@ router.patch('/records/:id', checkAuth, (req, res, next) => {
             docname: updatedRecord.docname,
             picture: updatedRecord.picture
           })
-        .then(records => {
+        .then(() => {
           res.status(200);
           res.send('');
         })

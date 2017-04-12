@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
 const jwt = require('jsonwebtoken');
+const humps = require('humps');
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';
 
@@ -59,6 +60,18 @@ router.delete('/notes/:id', checkAuth, (req, res, next) => {
     });
 });
 
+router.get('/notes/:id/edit', checkAuth, (req, res, next) => {
+  let noteId = req.params.id;
+
+  knex('notes')
+    .where('id', noteId)
+    .then((notes) => {
+      res.render('noteEdit', {
+        note: notes[0]
+      });
+    })
+})
+
 router.patch('/notes/:id', checkAuth, (req, res, next) => {
 
   let id = req.params.id;
@@ -66,10 +79,20 @@ router.patch('/notes/:id', checkAuth, (req, res, next) => {
   knex('notes')
     .where('id', id)
     .then((notes) => {
-      console.log(notes);
-      // res.render('noteEdit', {
-      //   notes: notes
-      // });
+      if (notes.length === 0) {
+        notFound(res);
+      } else {
+        knex('notes')
+          .returning(['id', 'body', 'record_id'])
+          .where('id', id)
+          .update({
+            body: req.body.body
+          })
+        .then((updatedNote) => {
+          res.status(200);
+          res.send(humps.camelizeKeys(updatedNote[0]));
+        })
+      }
     })
 })
 

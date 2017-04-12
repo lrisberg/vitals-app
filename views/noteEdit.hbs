@@ -14,13 +14,12 @@
 
 <body>
 
-  <h1>Edit a Note</h1>
-    <!-- <form id="editNoteForm" method="post">
-      {{#each notes}}
-        <textarea id="noteText" rows="4" cols="50">{{this.body}}</textarea>
+    <h1>Edit a Note</h1>
+    <form id="editNoteForm" method="post">
+        <textarea id="noteText" rows="4" cols="50">{{this.note.body}}</textarea>
+        <input id="noteId" type="hidden" value="{{this.note.id}}">
         <button id="editNoteButton" type="submit">Submit</button>
-      {{/each}}
-    </form> -->
+    </form>
 </body>
 
 </html>
