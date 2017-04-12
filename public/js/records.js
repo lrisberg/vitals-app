@@ -55,33 +55,28 @@ $(document).ready(() => {
         })
     })
 
-
-    // $('.deleteNoteButton').click((event) => {
-    //   let noteId = $(event.target).attr('value');
-    //   console.log(noteId);
-    //
-    //   var request = {
-    //     dataType: 'text',
-    //     type: 'DELETE',
-    //     url: `/notes/${noteId}`
-    //   };
-    //
-    //   $.ajax(request)
-    //     .done(() => {
-    //       window.location.reload();
-    //     })
-    //     .fail(() => {
-    //       console.log('FAIL');
-    //     })
-    // })
-
-
-
-
-
-
     $('#addRecord').click((event) => {
       window.location.href = "/records/add"
+    })
+
+    $('.editRecordButton').click((event) => {
+
+      let recordId = $(event.target).attr('name');
+      console.log(recordId);
+
+      var request = {
+        dataType: 'text',
+        type: 'POST',
+        url: `records/${recordId}/edit`
+      };
+
+      $.ajax(request)
+        .done(() => {
+          window.location.href = `/records/${recordId}/edit`;
+        })
+        .fail(() => {
+          console.log('FAIL');
+        })
     })
 
   })();
