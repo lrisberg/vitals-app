@@ -37,7 +37,7 @@ $(document).ready(function() {
 
       $.ajax(options)
         .done((options) => {
-          window.location.href = 'records';
+          window.location.href = '/records';
         })
         .fail(($xhr) => {
         });

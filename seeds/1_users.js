@@ -14,8 +14,8 @@ exports.seed = function(knex) {
           hashed_password: "$2a$12$YbS5MlJIsaRiYs2Qt8cxeOgAwyLpbT2qnwgNRQLv0Hvx6wb9mxQaC",
           age: 30,
           gender: 'male',
-          height: 72,
-          weight: 180.2,
+          height: '72',
+          weight: '180.2',
         },
         {
           id:2,
@@ -25,8 +25,8 @@ exports.seed = function(knex) {
           hashed_password: "$2a$12$YbS5MlJIsaRiYs2Qt8cxeOgAwyLpbT2qnwgNRQLv0Hvx6wb9mxQaC",
           age: 32,
           gender: 'Other',
-          height: 20,
-          weight: 40,
+          height: '20',
+          weight: '40',
         },
         {
         id:3,
@@ -36,8 +36,8 @@ exports.seed = function(knex) {
         hashed_password: "$2a$12$wT.5JTjuusI2f1XxeFVp1eXIWTmVwcZNLB3YI/Wko7Y96oveAAt6K",
         age: 40,
         gender: 'Male',
-        height: 68,
-        weight: 200,
+        height: '68',
+        weight: '200',
       },
 
       ]);
