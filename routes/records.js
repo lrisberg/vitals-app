@@ -45,7 +45,7 @@ router.get('/records/:id', checkAuth, (req, res, next) => {
     .join('records', 'records.id', '=', 'notes.record_id')
     .where({
       'record_id': recordId,
-      'user_id' : req.userId
+      'user_id': req.userId
     })
     .then((notes) => {
       if (notes.length === 0) {

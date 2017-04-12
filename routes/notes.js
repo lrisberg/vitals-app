@@ -41,24 +41,24 @@ router.get('/notes', checkAuth, (req, res, next) => {
     })
 });
 
-router.get('/notes/:id', checkAuth, (req, res, next) => {
-  const id = req.params.id
+router.get('/notes/:recordId', checkAuth, (req, res, next) => {
+  const recordId = req.params.recordId;
 
-  if (isNaN(parseInt(id))) {
+  if (isNaN(parseInt(recordId))) {
     notFound(res);
     return;
   }
 
   knex('notes')
-    .where('id', id)
+    .where('record_id', recordId)
     .then((notes) => {
       if (notes.length === 0) {
         notFound(res);
         return;
       }
 
-      console.log(notes[0])
       res.render('notes', {
+        recordId: recordId,
         notes: notes
       });
     })
@@ -66,13 +66,13 @@ router.get('/notes/:id', checkAuth, (req, res, next) => {
 
 router.post('/notes', checkAuth, (req, res, next) => {
 
+  let recordId = req.body.recordId;
   let noteBody = req.body.noteBody;
 
   knex('notes')
     .insert({
-      user_id: req.user.userId,
-      doctor_id: req.user.userId,
-      body: noteBody,
+      record_id: recordId,
+      body: noteBody
     })
     .then(() => {
       res.status(200);
