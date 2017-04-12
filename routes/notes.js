@@ -30,40 +30,6 @@ function notFound(res) {
   res.send('Not Found');
 }
 
-/* GET home page. */
-router.get('/notes', checkAuth, (req, res, next) => {
-  knex('notes')
-    .where('user_id', req.user.userId)
-    .then((notesFromKnex) => {
-      res.render('notes', {
-        notes: notesFromKnex
-      });
-    })
-});
-
-router.get('/notes/:recordId', checkAuth, (req, res, next) => {
-  const recordId = req.params.recordId;
-
-  if (isNaN(parseInt(recordId))) {
-    notFound(res);
-    return;
-  }
-
-  knex('notes')
-    .where('record_id', recordId)
-    .then((notes) => {
-      if (notes.length === 0) {
-        notFound(res);
-        return;
-      }
-
-      res.render('notes', {
-        recordId: recordId,
-        notes: notes
-      });
-    })
-});
-
 router.post('/notes', checkAuth, (req, res, next) => {
 
   let recordId = req.body.recordId;
@@ -79,5 +45,18 @@ router.post('/notes', checkAuth, (req, res, next) => {
       res.send('');
     })
 })
+
+router.delete('/notes/:id', checkAuth, (req, res, next) => {
+
+  let id = req.params.id;
+
+  knex('notes')
+    .where('id', id)
+    .del()
+    .then(() => {
+      res.status(200);
+      res.send('');
+    });
+});
 
 module.exports = router;

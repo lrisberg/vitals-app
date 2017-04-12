@@ -1,27 +1,26 @@
 $(document).ready(() => {
 
-  $('#addNoteButton').click((event) => {
+  $('#addRecordButton').click((event) => {
     event.preventDefault();
-
-    let noteBody = $('#noteText').val();
 
     var request = {
       contentType: 'application/json',
       data: JSON.stringify({
-        recordId: $('#recordId').val(),
-        noteBody: noteBody
+        name: $('#recordName').val(),
+        docname: $('#recordDocName').val(),
+        picture: $('#recordPicture').val()
       }),
       dataType: 'text',
       type: 'POST',
-      url: '/notes'
+      url: '/records'
     };
 
     $.ajax(request)
       .done(() => {
-        window.location.reload();
+        window.location.href = "/records";
       })
       .fail(() => {
         console.log('FAIL');
-      });
-  });
+      })
+  })
 })

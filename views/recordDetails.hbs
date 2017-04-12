@@ -6,20 +6,23 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="/js/notes.js">
+    <script type="text/javascript" src="/js/recordDetails.js">
 
     </script>
 
-    <title>Notes</title>
+    <title>Record Details</title>
 </head>
 
 <body>
-    <h1>Notes</h1>
+    <h1>Record Details</h1>
+
+    <h3>Notes</h3>
 
     {{#each notes}}
         <h1>
     {{this.body}}
   </h1>
+  <button class="deleteNoteButton" value="{{this.id}}" type="submit">Delete</button>
     {{/each}}
 
     <h1>Add a new note:</h1>

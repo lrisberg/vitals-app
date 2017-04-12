@@ -1,7 +1,6 @@
 $(document).ready(function() {
   (function() {
     'use strict';
-    console.log("hi!!")
 
     // $('.button-collapse').sideNav();
 

@@ -19,20 +19,31 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="stylesheets/gscss.css">
 
-    <title>Vitals :about</title>
+
+
+    <title>Style Guide</title>
 </head>
 
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-light">
-            <div class="container-fluid" style=" font-family: 'Pacifico', cursive; font-size:24px;">
+            <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
+
+
+  <!-- <div class="container-fluid"> -->
+  <nav class="navbar navbar-light">
+    <div class="container-fluid" style="font-family: 'Pacifico', cursive; font-size:24px;">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+
         </button>
                     <a class="navbar-brand" style="font-size: 42px;" href="/index">Vitals</a>
                 </div>
@@ -41,6 +52,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class=""><a href="/testimonials">Testimonials<span class="sr-only"></span></a></li>
+                        <li class=""><a href="/login">Sign Up!<span class="sr-only"></span></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -51,55 +63,43 @@
                             </ul>
                         </li>
                     </ul>
+
                     <ul class="nav navbar-nav navbar-right">
-                        <li class=""><a href="/login">Login<span class="sr-only"></span></a></li>
-                        <li class=""><a href="/signup">Sign up<span class="sr-only"></span></a></li>
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="username" placeholder="email">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+                            <button type="submit" class="btn btn-default">Log In</button>
+
+
+                        </form>
+
+
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <div class="row">
-          <div class="card-deck">
-<div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="pict" src="../public/images/rx.jpeg"  alt="rx">
-                    <div class="caption">
-                        <h3>Prescriptions</h3>
-                        <button class="bttn-unite bttn-md bttn-primary">Add Notes</button>
-                        <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="pict" src="../public/images/blood.jpg" alt="blood">
-                    <div class="caption">
-                        <h3>Blood Info</h3>
-                        <button class="bttn-unite bttn-md bttn-primary">Add Notes</button>
-                        <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <div class="thumbnail">
-                    <img class="pict" src="../public/images/skull.jpg" alt="Xray">
-                    <div class="caption">
-                        <h3>Xray</h3>
-                        <button class="bttn-unite bttn-md bttn-primary">Add Notes</button>
-                        <button class="bttn-unite bttn-md bttn-primary">Calendar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-        <footer class="navbar-default navbar-fixed-bottom">
-            <div class="container-fluid ">
-                <span>© 2017 Vitals Development Group</span>
-                <span class="col-sm-5"><a href="/about">About</a></span>
-            </div>
-        </footer>
-</body>
+    </div>
+    <div class="helm">
+        <div class="container">
 
+          <h1 align="middle">BloodWork Info</h1>
+          <textarea placeholder="Describe yourself here..." alig="middle" rows="14" cols="150" placeholder="Enter text">
+          </textarea>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+
+    <footer class="navbar-default navbar-fixed-bottom">
+        <div class="container-fluid ">
+            <span>© 2017 Vitals Development Group</span>
+            <span class="col-sm-5"><a href="/about">About</a></span>
+        </div>
+    </footer>
+  </body>
 </html>
