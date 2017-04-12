@@ -34,5 +34,9 @@ $(document).ready(() => {
         });
     })
 
+    $('#addRecord').click((event) => {
+      window.location.href = "/records/add"
+    })
+
   })();
 })
