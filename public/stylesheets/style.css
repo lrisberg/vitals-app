@@ -172,6 +172,20 @@ hr.style18:after {
   font-size: 12px;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.recFoot {
+  position: absolute;
+left: 0;
+bottom: 0;
+height: 120px;
+width: 100%;
+overflow:hidden;
+}
+
 
 /*Buttons on Doctor Page CSS*/
 /*!
