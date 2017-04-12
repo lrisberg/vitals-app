@@ -177,10 +177,10 @@ html {
     min-height: 100%;
 }
 
-.recFoot {
+.recFoot2 {
   position: absolute;
 left: 0;
-bottom: 0;
+bottom: 10;
 height: 120px;
 width: 100%;
 overflow:hidden;
