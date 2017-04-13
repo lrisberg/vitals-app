@@ -35,9 +35,41 @@ router.get('/records', checkAuth, (req, res, next) => {
   knex('records')
     .where('user_id', req.user.userId)
     .then((recordsFromKnex) => {
+      for (let record of recordsFromKnex) {
+        record.picture = getPictureFilename(record);
+      }
       res.render('records', { records: recordsFromKnex });
     })
 });
+
+function getPictureFilename(record) {
+  switch(record.name) {
+    case "Test Results":
+      return "results.png";
+    case "Prescriptions":
+      return "prescription.png";
+    case "General Practitioner":
+      return "doctor.png";
+    case "Dentist":
+      return "dentist.png";
+    case "Optometrist":
+      return "optometrist.png";
+    case "Cardiologist":
+      return "cardiologist.png";
+    case "Orthodontist":
+      return "orthodontist.png";
+    case "Pediatrician":
+      return "pediatrician.png";
+    case "Gynecologist":
+      return "gynecologist.png";
+    case "Pathologist":
+      return "pathologist.png";
+    case "Urologist":
+      return "kidney.png";
+    default:
+      return '';
+  }
+}
 
 router.get('/records/add', checkAuth, (req, res, next) => {
   res.render('recordAdd');
