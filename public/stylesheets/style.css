@@ -369,8 +369,8 @@ header a.logo img{min-height: 70px; margin-left: 0;}
 .box-content.box-style-2{background: url(../images/box-style-2.jpg) no-repeat fixed 100% 100%; }
 
 .box-content.box-1 {}
-.box-content.box-1 .service{padding: 50px 30px 20px;text-align: center;background:#fff;-webkit-box-shadow: 0px 56px 36px -60px #121D12; -moz-box-shadow: 0px 56px 36px -60px #121D12; -o-box-shadow: 0px 56px 36px -60px #121D12;min-height: 450px;}
-.box-content.box-1 .service h3{color: #363638;font-size:25px;text-transform:uppercase;}
+.box-content.box-1 .service{padding: 50px 30px 20px;text-align: center;background:#fff;-webkit-box-shadow: 0px 56px 36px -60px #121D12; -moz-box-shadow: 0px 56px 36px -60px #121D12; -o-box-shadow: 0px 56px 36px -60px #121D12;min-height: 300px;}
+.box-content.box-1 .service h3{color: #363638;font-size:25px;}
 .box-content.box-1 .service img{display: inline-block;margin-bottom:10px;}
 
 .box-content.box-2,
