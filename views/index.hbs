@@ -4,6 +4,10 @@
 <head>
     <meta charset="utf-8">
 
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="895327092315-84942ut9ok6ugi979dshfo2b8ch40sto.apps.googleusercontent.com">
+</head>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -26,6 +30,8 @@
         <link href="owl-carousel/owl.theme.css" rel="stylesheet">
 
     <script src="/js/login.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="/js/google.js"></script>
 
     <title>Vitals</title>
 </head>
@@ -47,7 +53,11 @@
             Sign Up!
           </a>
         </div>
-
+        <div class="container-fluid googlesignin">
+  <div class="col-md-3">
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+  </div>
+</div>
 
 
           <ul class="nav navbar-nav navbar-right">
