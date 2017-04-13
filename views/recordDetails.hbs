@@ -55,7 +55,7 @@
 
   </header>
 
-
+<body>
 <div class="container" >
     <h1>(NAME OF Record) Details</h1>
     <h1>(NAME OF DOCTOR or blank if no text?) </h1>
@@ -65,8 +65,8 @@
         <h1>
     {{this.body}}
   </h1>
-  <button class="deleteNoteButton" value="{{this.id}}" type="submit">Delete</button>
-  <button class="editNoteButton" value="{{this.id}}" type="submit">Edit</button>
+  <button class="deleteNoteButton bttn-unite bttn-md bttn-primary" value="{{this.id}}" type="submit">Delete</button>
+  <button class="editNoteButton bttn-unite bttn-md bttn-primary" value="{{this.id}}" type="submit">Edit</button>
     {{/each}}
 
     <h1>Add a new note:</h1>
@@ -74,12 +74,12 @@
         <textarea id="noteText" rows="4" cols="50"></textarea>
         <input id="recordId" type="hidden" name="recordId" value="{{this.recordId}}">
         <br>
-        <input id="addNoteButton" type="submit" value="Submit">
+        <input class="bttn-unite bttn-md bttn-primary" id="addNoteButton" type="submit" value="Submit">
     </form>
 
 </div>
-
-
+</body>
+<br>
     <footer>
         <div class="wrap-footer recFoot2">
             <div class="container">
