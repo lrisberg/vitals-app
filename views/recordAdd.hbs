@@ -43,22 +43,36 @@
         </div>
     </header>
 
-    <h1 class = "text-center">Add A New Record</h1>
+    <h1 class = "center">Add A New Record</h1>
     <br>
     <div class = "container center">
       <form id="addRecordForm" class="right" method="post">
-      <div class="form-group row">
-        <label for="example-text-input" class="col-2 col-form-label">Text</label>
-        <div class="col-6">
-          <input class="form-control" type="text" name="name" placeholder="Enter a name" id="recordName">
+
+        <div class="form-group row">
+            <label for="exampleSelect1" class="col-sm-1 col-xs-10 col-form-label">Name</label>
+            <div class="col-sm-4">
+                <select class="form-control" id="Name" required>
+                  <option>Cardiologist</option>
+                  <option>Dentist</option>
+                  <option>General Practitioner</option>
+                  <option>Gynecologist</option>
+                  <option>Optometrist</option>
+                  <option>Orthodontist</option>
+                  <option>Pathologist</option>
+                  <option>Pediatrician</option>                  <option>Prescriptions</option>
+                  <option>Test Results</option>
+                  <option>Urologist</option>
+                </select>
+            </div>
         </div>
-      </div>
-      <div class="form-group row">
-        <label for="example-search-input" class="col-2 col-form-label" name="docName">Search</label>
-        <div class="col-6">
-          <input class="form-control" type="text" placeholder="Enter your doctor's name" id="recordDocName">
+
+        <div class="form-group row">
+            <label for="doctor" class="col-sm-1 col-xs-10 col-form-label">Doctor's Name</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" placeholder="Doctor name (optional)" id="recordDocName" optional>
+            </div>
         </div>
-      </div>
+
       <button id="addRecordButton" type="submit">Submit</button>
     </form>
   </div>
