@@ -1,3 +1,6 @@
+.logo {
+  /*padding: px;*/
+}
 
 .jumbotron {
   background-size: cover;
@@ -287,7 +290,9 @@ a:focus {color: #E84C3D;text-decoration: none;}
 header{background: #E84C3D;min-height: 90px;color: #fff;padding: 40px 0;}
 header strong.contact-phone{font-size: 40px;}
 header strong.contact-phone i.fa{ margin-right: 5px;}
-header a.logo img{min-height: 70px; margin-left: -152px;}
+
+/*CHANGED THE MARGIN LEFT FROM -152PX TO 0*/
+header a.logo img{min-height: 70px; margin-left: 0;}
 
 .navbar-default{border: none;background-color: #fff;box-shadow: 0 5px 11px rgba(0, 0, 0, 0.05);margin-bottom: 30px;padding: 5px;font-weight: bold;font-size: 18px;}
 .navbar-default{border: none;background-color: #fff;box-shadow: 0 5px 11px rgba(0, 0, 0, 0.05);margin-bottom: 30px;padding: 5px;font-weight: bold;font-size: 18px;}
