@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
 const jwt = require('jsonwebtoken');
+const gapi = require('googleapis')
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';
 

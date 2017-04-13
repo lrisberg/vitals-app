@@ -7,6 +7,7 @@ const knex = require('../knex');
 const humps = require('humps');
 const jwt = require('jsonwebtoken');
 const ev = require('express-validation');
+const gapi = require('googleapis')
 
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';

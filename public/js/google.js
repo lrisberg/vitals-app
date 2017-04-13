@@ -6,15 +6,17 @@ function onSignIn(googleUser) {
   let id_token = googleUser.getAuthResponse().id_token
 
   $.ajax({
+    contentType: 'application/json',
     method: 'POST',
-    url: '/',
+    url: '/users',
     data: {
       name: profile.getName(),
-      email: profile.getEmail()
+      email: profile.getEmail(),
+      id_token:id_token
     },
     success: (data) => {
       if (data) {
-        window.location = '/home'
+        window.location = '/records'
       }
     },
     error: (err) => {
