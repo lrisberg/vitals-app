@@ -39,12 +39,14 @@ router.get('/records', checkAuth, (req, res, next) => {
       for (let record of recordsFromKnex) {
         record.picture = getPictureFilename(record);
       }
-      res.render('records', { records: recordsFromKnex });
+      res.render('records', {
+        records: recordsFromKnex
+      });
     })
 });
 
 function getPictureFilename(record) {
-  switch(record.name) {
+  switch (record.name) {
     case "Test Results":
       return "results.png";
     case "Prescriptions":
@@ -84,8 +86,22 @@ router.get('/records/:recordId/edit', checkAuth, (req, res, next) => {
   knex('records')
     .where('id', recordId)
     .then((records) => {
+      const record = records[0];
       res.render('recordEdit', {
-        record: records[0]
+        record: record,
+        selected: {
+          'Cardiologist': record.name === 'Cardiologist' ? 'selected' : '',
+          'Dentist': record.name === 'Dentist' ? 'selected' : '',
+          'GeneralPractitioner': record.name === 'General Practitioner' ? 'selected' : '',
+          'Gynecologist': record.name === 'Gynecologist' ? 'selected' : '',
+          'Optometrist': record.name === 'Optometrist' ? 'selected' : '',
+          'Orthodontist': record.name === 'Orthodontist' ? 'selected' : '',
+          'Pathologist': record.name === 'Pathologist' ? 'selected' : '',
+          'Pediatrician': record.name === 'Pediatrician' ? 'selected' : '',
+          'Prescriptions': record.name === 'Prescriptions' ? 'selected' : '',
+          'TestResults': record.name === 'Test Results' ? 'selected' : '',
+          'Urologist': record.name === 'Urologist' ? 'selected' : ''
+        }
       });
     })
 })
@@ -146,10 +162,10 @@ router.patch('/records/:id', checkAuth, (req, res, next) => {
             docname: updatedRecord.docname,
             picture: updatedRecord.picture
           })
-        .then(() => {
-          res.status(200);
-          res.send('');
-        })
+          .then(() => {
+            res.status(200);
+            res.send('');
+          })
       }
     })
 })

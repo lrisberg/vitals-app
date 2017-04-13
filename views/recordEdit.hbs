@@ -29,47 +29,57 @@
 
 <body>
 
-  <header>
-    <div class="container headClass">
-      <div class="row">
-        <div class="row">
-            <div class="col-md-6">
-                <a href="#" class="logo"><img class="ricky" src="/images/logo1.png" width=30% height=15% alt="Third slide"></a>
-            </div>
-            <div class="nav navbar-nav navbar-right">
-              <a class="navbar-brand signUpBut " href="/records" style="font-family: 'Palanquin Dark', sans-serif;">
+    <header>
+        <div class="container headClass">
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a href="#" class="logo"><img class="ricky" src="/images/logo1.png" width=30% height=15% alt="Third slide"></a>
+                    </div>
+                    <div class="nav navbar-nav navbar-right">
+                        <a class="navbar-brand signUpBut " href="/records" style="font-family: 'Palanquin Dark', sans-serif;">
 
                 Home
               </a>
-            </div>
-            <div class="col-md-6 text-right">
-                <div class="nav navbar-nav navbar-right">
-                  <div class="nav navbar-nav navbar-right">
-             <button type="submit"  id="logoutButton"class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
-                  </div>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="nav navbar-nav navbar-right">
+                            <div class="nav navbar-nav navbar-right">
+                                <button type="submit" id="logoutButton" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-      </div>
-  </header>
+    </header>
 
     <div class="container">
-      <div class="paper">
-        <!-- Header --><br>
-        <h2>Record Edit </h2><br><br><br><br>
-        <form id="editRecordForm" method="post">
-            <input id="recordName" type="text" name="name" value="{{this.record.name}}" placeholder="Enter a name">
-            <br>
-            <input id="recordDocName" type="text" name="docName" value="{{this.record.docname}}" placeholder="Enter your doctor's name">
-            <br>
-            <input id="recordPicture" type="text" name="picture" value="{{this.record.picture}}" placeholder="Enter a URL">
-            <br>
-            <input id="recordId" type="hidden" name="id" value="{{this.record.id}}">
-            <br>
-            <button id="editRecordButton" type="submit">Submit</button>
-        </form>
-      </div>
+        <div class="paper">
+            <!-- Header --><br>
+            <h2>Record Edit </h2><br><br><br><br>
+            <form id="editRecordForm" method="post">
+              <select id="recordName" required>
+            <option {{selected.Cardiologist}}>Cardiologist</option>
+            <option {{selected.Dentist}}>Dentist</option>
+            <option {{selected.GeneralPractitioner}}>General Practitioner</option>
+            <option {{selected.Gynecologist}}>Gynecologist</option>
+            <option {{selected.Optometrist}}>Optometrist</option>
+            <option {{selected.Orthodontist}}>Orthodontist</option>
+            <option {{selected.Pathologist}}>Pathologist</option>
+            <option {{selected.Pediatrician}}>Pediatrician</option>
+            <option {{selected.Prescriptions}}>Prescriptions</option>
+            <option {{selected.TestResults}}>Test Results</option>
+            <option {{selected.Urologist}}>Urologist</option>
+          </select>
+                <br>
+                <input id="recordDocName" type="text" name="docName" value="{{this.record.docname}}" placeholder="Enter your doctor's name">
+                <br>
+                <input id="recordId" type="hidden" name="id" value="{{this.record.id}}">
+                <br>
+                <button id="editRecordButton" type="submit">Submit</button>
+            </form>
+        </div>
     </div>
     <footer>
         <div class="wrap-footer recFoot">

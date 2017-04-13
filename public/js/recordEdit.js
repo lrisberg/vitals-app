@@ -9,8 +9,7 @@ $(document).ready(() => {
       contentType: 'application/json',
       data: JSON.stringify({
         name: $('#recordName').val(),
-        docname: $('#recordDocName').val(),
-        picture: $('#recordPicture').val()
+        docname: $('#recordDocName').val()
       }),
       dataType: 'text',
       type: 'PATCH',
