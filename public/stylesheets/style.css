@@ -181,7 +181,7 @@ html {
 }
 
 .recFoot {
-position:absolute;
+/*position:absolute;*/
 left: 0;
 bottom: 0;
 height: 120px;
