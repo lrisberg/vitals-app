@@ -56,8 +56,10 @@
 
 <body>
 <div class="container" >
-    <h1>(NAME OF Record) Details</h1>
-    <h1>(NAME OF DOCTOR or blank if no text?) </h1>
+    <h1>{{record.name}}</h1>
+    <h1>{{record.docname}}</h1>
+
+
     <h3>Notes</h3>
 
     {{#each notes}}

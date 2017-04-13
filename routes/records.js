@@ -100,11 +100,15 @@ router.get('/records/:recordId', checkAuth, (req, res, next) => {
   knex('notes')
     .where('record_id', recordId)
     .then((notes) => {
-
-      res.render('recordDetails', {
-        recordId: recordId,
-        notes: notes
-      });
+      knex('records')
+        .where('id', recordId)
+        .then((records) => {
+          res.render('recordDetails', {
+            recordId: recordId,
+            notes: notes,
+            record: records[0]
+          });
+        })
     })
 });
 
