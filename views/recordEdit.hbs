@@ -36,16 +36,11 @@
                     <div class="col-md-6">
                         <a href="/records" class="logo"><img class="ricky" src="/images/logo1.png" width=30% height=15% alt="Third slide"></a>
                     </div>
-                    <div class="nav navbar-nav navbar-right">
-                        <a class="navbar-brand signUpBut " href="/records" style="font-family: 'Palanquin Dark', sans-serif;">
 
-                Home
-              </a>
-                    </div>
                     <div class="col-md-6 text-right">
                         <div class="nav navbar-nav navbar-right">
                             <div class="nav navbar-nav navbar-right">
-                                <button type="submit" id="logoutButton" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
+                                <button type="submit" id="logoutButton" class="btn btn-primary btn-lg" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
                             </div>
                         </div>
                     </div>
@@ -73,11 +68,11 @@
             <option {{selected.Urologist}}>Urologist</option>
           </select>
                 <br>
-                <input id="recordDocName" type="text" name="docName" value="{{this.record.docname}}" placeholder="Enter your doctor's name">
+                <input id="recordDocName" type="text" name="docName" value="{{this.record.docname}}" placeholder="Your doctor's name">
                 <br>
                 <input id="recordId" type="hidden" name="id" value="{{this.record.id}}">
                 <br>
-                <button id="editRecordButton" type="submit">Submit</button>
+                <button id="editRecordButton" class="btn btn-primary btn-lg" type="submit">Submit</button>
             </form>
         </div>
     </div>
