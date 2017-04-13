@@ -5,7 +5,11 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const knex = require('../knex');
 const humps = require('humps');
+const jwt = require('jsonwebtoken');
 const ev = require('express-validation');
+
+
+const SECRET = process.env.JWT_KEY || 'itsasecret';
 
 
 /* GET users listing. */
@@ -26,6 +30,14 @@ router.post('/users/', (req, res, next) => {
     })
     .then((users) => {
       const user = users[0];
+
+      const token = jwt.sign({
+        userId: users[0].id
+      }, SECRET);
+      res.cookie('token', token, {
+        httpOnly: true
+      });
+
       delete user.hashed_password;
       res.send(humps.camelizeKeys(user));
     })
