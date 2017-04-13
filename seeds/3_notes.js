@@ -43,6 +43,31 @@ exports.seed = function(knex, Promise) {
           id: 8,
           record_id: 11,
           body: "Blood work came back good."
+        },
+        {
+          id: 9,
+          record_id: 12,
+          body: "I'm supposed to pick up my new prescription at the pharmacy at King Sooper's."
+        },
+        {
+          id: 10,
+          record_id: 13,
+          body: "My blood work came back better than last time! I guess all this exercise and eating healthy is really paying off."
+        },
+        {
+          id: 11,
+          record_id: 14,
+          body: "I'm due for my physical next November."
+        },
+        {
+          id: 12,
+          record_id: 15,
+          body: "My eyes have been bothering me lately. Too much staring at the computer screen! I need to check in with my optometrist by next month."
+        },
+        {
+          id: 13,
+          record_id: 16,
+          body: "The dentist told me to floss more..."
         }
       ]);
     })
