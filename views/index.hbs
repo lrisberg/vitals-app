@@ -3,9 +3,6 @@
 
 <head>
     <meta charset="utf-8">
-
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="895327092315-84942ut9ok6ugi979dshfo2b8ch40sto.apps.googleusercontent.com">
 </head>
 
 <!-- jQuery -->
@@ -30,8 +27,6 @@
 <link href="owl-carousel/owl.theme.css" rel="stylesheet">
 
 <script src="/js/login.js" type="text/javascript"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="/js/google.js"></script>
 
 <link rel="icon" href="/favicon.png" type="image/png" sizes="500x500">
 
@@ -53,11 +48,11 @@
                     <div class="nav navbar-nav navbar-right">
 
                     </div>
-                    <div class="container-fluid googlesignin">
+                    <!-- <div class="container-fluid googlesignin">
                         <div class="col-md-3">
                             <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <ul class="nav navbar-nav navbar-right">
@@ -271,6 +266,10 @@
             });
         });
     </script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="895327092315-84942ut9ok6ugi979dshfo2b8ch40sto.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/js/google.js"></script>
 </body>
 
 </html>

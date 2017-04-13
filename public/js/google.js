@@ -7,14 +7,15 @@ function onSignIn(googleUser) {
 
   $.ajax({
     method: 'POST',
-    url: '/',
+    url: '/token',
     data: {
       name: profile.getName(),
       email: profile.getEmail()
     },
     success: (data) => {
+      console.log('post success')
       if (data) {
-        window.location = '/home'
+        window.location = '/records'
       }
     },
     error: (err) => {
