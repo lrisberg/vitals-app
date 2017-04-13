@@ -39,7 +39,7 @@
                 <div class="col-md-6 text-right">
                     <div class="nav navbar-nav navbar-right">
                         <div class="nav navbar-nav navbar-right">
-                            <button type="submit" id="logoutButton" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
+                            <button type="submit" id="logoutButton" class="btn btn-primary" style="font-family: 'Palanquin Dark', sans-serif;">Log Out</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,8 @@
         <form id="editNoteForm" method="post">
             <textarea id="noteText" rows="4" cols="50">{{this.note.body}}</textarea>
             <input id="noteId" type="hidden" value="{{this.note.id}}">
-            <button id="editNoteButton" type="submit">Submit</button>
+            <br>
+            <button class="btn btn-primary" id="editNoteButton" type="submit">Submit</button>
         </form>
     </div>
     <footer>
