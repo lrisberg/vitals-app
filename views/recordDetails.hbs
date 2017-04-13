@@ -59,15 +59,32 @@
     <h1>{{record.docname}}</h1>
 
 
-    <h3>Notes</h3>
+    <!-- <h3>Notes</h3> -->
 
     {{#each notes}}
+
+      <div class="media">
+        <a class="pull-left" href="#">
+                        <img class="media-object" src="/images/clipboard.png" alt="">
+        </a>
+        <div class="media-body">
+          <h4 class="media-heading">
+            <small>{{this.created_at}}</small>
+          </h4>
         <h6>
     {{this.body}}
   </h6>
+</div>
+</div>
+
+
+
   <button class="btn btn-primary btn-lg deleteNoteButton" value="{{this.id}}" type="submit">Delete</button>
   <button class="btn btn-primary btn-lg editNoteButton" value="{{this.id}}" type="submit">Edit</button>
     {{/each}}
+    <br>
+
+
 
     <h1>Add a new note:</h1>
     <form>
