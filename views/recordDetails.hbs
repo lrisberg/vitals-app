@@ -61,9 +61,9 @@
     <h3>Notes</h3>
 
     {{#each notes}}
-        <h1>
+        <h6>
     {{this.body}}
-  </h1>
+  </h6>
   <button class="btn btn-primary btn-lg deleteNoteButton" value="{{this.id}}" type="submit">Delete</button>
   <button class="btn btn-primary btn-lg editNoteButton" value="{{this.id}}" type="submit">Edit</button>
     {{/each}}
