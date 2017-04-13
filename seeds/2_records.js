@@ -80,7 +80,37 @@ exports.seed = function(knex) {
           name: "Urologist",
           docname: "Eddie Thorp",
           picture: "kidney.png"
-        }
+        },
+        {
+          id: 12,
+          user_id: 4,
+          name: "Prescriptions",
+          picture: "prescriptions.png"
+        },
+        {
+          id: 13,
+          user_id: 4,
+          name: "Test Results",
+          picture: "results.png"
+        },
+        {
+          id: 14,
+          user_id: 4,
+          name: "General Practitioner",
+          picture: "doctor.png"
+        },
+        {
+          id: 15,
+          user_id: 4,
+          name: "Optometrist",
+          picture: "optometrist.png"
+        },
+        {
+          id: 16,
+          user_id: 4,
+          name: "Dentist",
+          picture: "dentist.png"
+        },
       ]);
     })
     .then(() => {
