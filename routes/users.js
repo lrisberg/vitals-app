@@ -7,13 +7,14 @@ const knex = require('../knex');
 const humps = require('humps');
 const jwt = require('jsonwebtoken');
 const ev = require('express-validation');
+const validations = require('../validations/users');
 
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';
 
 
 /* GET users listing. */
-router.post('/users/', (req, res, next) => {
+router.post('/users/', ev(validations.post), (req, res, next) => {
   bcrypt.hash(req.body.password, 12)
     .then((hashed_password) => {
       return knex('users')
