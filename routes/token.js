@@ -6,6 +6,7 @@ const humps = require('humps');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt-as-promised');
+const gapi = require('googleapis')
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';
 
