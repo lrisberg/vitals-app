@@ -159,8 +159,7 @@ router.patch('/records/:id', checkAuth, (req, res, next) => {
           .where('id', id)
           .update({
             name: updatedRecord.name,
-            docname: updatedRecord.docname,
-            picture: updatedRecord.picture
+            docname: updatedRecord.docname
           })
           .then(() => {
             res.status(200);
