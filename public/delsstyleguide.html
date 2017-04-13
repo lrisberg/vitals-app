@@ -1,332 +1,50 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-    <!-- bootstrap cdn -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Palanquin+Dark" rel="stylesheet">
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="stylesheets/style.css">
-
-    <!-- Owl Carousel Assets -->
-        <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
-        <link href="owl-carousel/owl.theme.css" rel="stylesheet">
-
-    <title>Style Guide</title>
-</head>
-<body>
-
-	<!-- /////////////////////////////////////////Top -->
-	<header>
-		<div class="container headClass">
-			<div class="row">
-				<div class="col-md-6">
-					<a href="#" class="logo"><img  class="ricky" src="images/logo1.png" width =30% height=15% alt="Third slide"></a>
-				</div>
-				<div class="col-md-6 text-right">
-					<!-- <span>Information Service:</span></br>
-					<strong class="contact-phone"><i class="fa fa-phone"></i> 800-2345-6789</strong> -->
-        <div class="nav navbar-nav navbar-right">
-          <a class="navbar-brand signUpBut " href="#" style="font-family: 'Palanquin Dark', sans-serif;">
-
-            Sign Up!
-          </a>
-        </div>
+    <head>
+        <title>BMI Calculator</title>
+        <script type="text/javascript">
+     function computeBMI() {
+          //Obtain user inputs
+         var height = Number(document.getElementById("height").value);
+         var heightunits = document.getElementById("heightunits").value;
+         var weight = Number(document.getElementById("weight").value);
+         var weightunits = document.getElementById("weightunits").value;
 
 
+         //Convert all units to metric
+         if (heightunits == "inches") height /= 39.3700787;
+         if (weightunits == "lb") weight /= 2.20462;
 
-          <ul class="nav navbar-nav navbar-right">
-            <form class="navbar-form navbar-right" role="search">
+         //Perform calculation
+         var BMI = weight / Math.pow(height, 2);
+         //Display result of calculation
+    document.getElementById("output").innerHTML = Math.round(BMI * 100)/100;
+         if (BMI < 18.5) document.getElementById("comment").innerHTML = "Underweight";
+         if (BMI >= 18.5 && BMI <= 25) document.getElementById("comment").innerHTML = "Normal";
+         if (BMI >= 25 && BMI <= 30) document.getElementById("comment").innerHTML = "Obese";
+         if (BMI > 30) document.getElementById("comment").innerHTML = "Overweight";
+     }
+       }
+        </script>
+    </head>
+    <body>
+         <h1>Body Mass Index Calculator</h1>
+        <p>Enter your height:
+            <input type="text" id="height" />
+            <select type="multiple" id="heightunits">
+                <option value="metres" selected="selected">metres</option>
+                <option value="inches">inches</option>
+            </select>
+        </p>
+        <p>Enter your weight:
+            <input type="text" id="weight" />
+            <select type="multiple" id="weightunits">
+                <option value="kg" selected="selected">kilograms</option>
+                <option value="lb">pounds</option>
+            </select>
+        </p>
+        <input type="button" value="computeBMI" onclick="computeBMI()"/>
+         <h1>Your BMI is: <span id="output">?</span></h1>
 
-             <div class="form-group">
-                 <input type="email" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="username" placeholder="email">
-             </div>
-             <div class="form-group">
-                 <input type="password" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="password" placeholder="Password">
-             </div>
-             <button type="submit" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log In</button>
-
-
-
-
-         </form>
-
-
-          </ul>
-				</div>
-			</div>
-		</div>
-	</header>
-  <br>
-	<!-- Header -->
-
-	<!-- /////////////////////////////////////////Navigation -->
-	<!-- <nav class="navbar navbar-default" role="navigation" >
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-						data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-
-        <a class="navbar-brand" href="#" style="font-family: 'Palanquin Dark', sans-serif;">
-					Sign Up!
-				</a>
-			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
-				<!-- <ul class="nav navbar-nav navbar-right">
-					<li>
-                        <a class="page-scroll" href="index.html">Home</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="single.html">About</a>
-                    </li>
-					<li>
-                        <a class="page-scroll" href="service.html">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="archive.html">Blogs</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="contact.html">Contacts</a>
-                    </li>
-				</ul> -->
-        <!-- <ul class="nav navbar-nav navbar-right">
-          <form class="navbar-form navbar-right" role="search">
-           <div class="form-group">
-               <input type="email" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="username" placeholder="email">
-           </div>
-           <div class="form-group">
-               <input type="password" class="form-control" style="font-family: 'Palanquin Dark', sans-serif;" name="password" placeholder="Password">
-           </div>
-           <button type="submit" class="btn btn-default" style="font-family: 'Palanquin Dark', sans-serif;">Log In</button>
-
-
-
-
-       </form>
-
-
-        </ul>
-			</div>
-		</div>
-	</nav> -->
-
-	<div class="slide">
-		<div class="container">
-			<div class="row">
-				<!-- Carousel -->
-				<div id="carousel-example-generic" class="carousel slide box-shadow" data-ride="carousel">
-					<!-- Indicators -->
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-					</ol>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<div class="item active">
-							<img src="images/8.2.jpg" alt="First slide">
-
-						</div>
-						<!-- <div class="item">
-							<img src="https://mindbodygreen-res.cloudinary.com/images/c_scale,w_770,q_80,f_auto,fl_lossy/crp/WomanOnTopOfMountainAtSunset-850x400/25-habits-people-happy-healthy-successful.jpg" alt="Second slide">
-
-						</div> -->
-
-
-						<!-- <div class="item ">
-							<img src="images/1.jpg" alt="Third slide">
-
-						</div> -->
-
-						<div class="item">
-							<img src="http://images.wisegeek.com/doctors-and-nurses.jpg" alt="Fourth slide">
-
-						</div>
-
-            <div class="item">
-							<img src="images/HikingPkg.jpg" alt="Fifth slide">
-
-						</div>
-            </div>
-
-					<!-- Controls -->
-					<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-					</a>
-					<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-					</a>
-				</div><!-- /carousel -->
-			</div>
-		</div>
-	</div>
-
-	<a id='backTop'>Back To Top</a>
-	<!-- /Back To Top -->
-
-	<!-- /////////////////////////////////////////Content -->
-	<div id="page-content" class="index-page">
-    <section class="box-content box-2 container box-style-2 box-shadow">
-      <div class="row">
-        <div class="col-md-12" style="font-family: 'Palanquin Dark', sans-serif;">
-          <h3>Welcome to Vitals!</h3>
-          <p>This app allows all your medical records to be in one place. You personally pick and choose which records you'd like to keep track of (ex. bloodwork, Dentist, prescriptions, etc.). Vitals allows you to never have to rummage through piles of records and notes from your doctor(s) again. </p>
-          <!-- <a class="btn btn-lg btn-blue box-shadow" href="#">Read More</a> -->
-        </div>
-      </div>
-    </section>
-
-		<!-- ////////////Content Box 01 -->
-		<div id="services"></div>
-		<section class="box-content container box-1">
-			<div class="row">
-				<div class="col-sm-4 ">
-					<div class="service">
-						<a><img src="images/report.png"></a>
-						<h3>Keep a log of all your doctors appointments!</h3>
-						<p>Create your own records you want to keep track of (Dentist, General Practioner, Cardiologist, etc.)</p>
-						<!-- <a class="btn btn-2 btn-sm" href="#">Read More</a> -->
-					</div>
-				</div>
-				<div class="col-sm-4 ">
-					<div class="service">
-						<a><img src="images/002-drugs.png"></a>
-						<h3>Keep track of all your prescriptions and bloodwork!</h3>
-						<p>You can upload blood test results and keep track of your prescriptions and when to fill them</p>
-						<!-- <a class="btn btn-2 btn-sm" href="#">Read More</a> -->
-					</div>
-				</div>
-				<div class="col-sm-4 ">
-					<div class="service">
-						<a><img src="images/001-hospital.png"></a>
-						<h3>Record your weight and height and calculate your BMI!</h3>
-						<p> Be able to simply click a button that tells you your current BMI on your profile page </p>
-						<!-- <a class="btn btn-2 btn-sm" href="#">Read More</a> -->
-					</div>
-				</div>
-			</div>
-		</section>
-    <!-- ////////////Content Box 02 -->
-
-
-
-		<!-- ////////////Content Box 05 -->
-		<section class="box-content container box-5 box-shadow" >
-			<div id="owl-brand" class="owl-carousel">
-				<div class="row item">
-					<div class="col-md-4 text-center" >
-						<img src="http://www.famousbirthdays.com/headshots/lauren-conrad-4.jpg" class="testimonials img-circle" alt="">
-					</div>
-					<div class="col-md-8">
-						<div class="box-comment" style="font-family: 'Palanquin Dark', sans-serif;">
-							"Sometimes it's difficult to remember the doctor's orders. With Vital, I'm able to save notes from all my visits!"
-						</div>
-						<a class="author" href="#">Lauren M,Colorado</a>
-					</div>
-				</div>
-				<div class="row item">
-					<div class="col-md-4 text-center">
-						<img src="https://www.biography.com/.image/c_fill%2Ccs_srgb%2Cg_face%2Ch_300%2Cq_80%2Cw_300/MTE5NDg0MDU1MjMyMDIyMDMx/doris-roberts-9542615-1-402.jpg" class="testimonials img-circle" alt="">
-					</div>
-					<div class="col-md-8">
-						<div class="box-comment" style="font-family: 'Palanquin Dark', sans-serif;">
-							"This has made keeping up with my prescriptions so much easier. Now I know when I need to take my medication, and when I should consider getting a refill."
-						</div>
-						<a class="author" href="#">Doris L, New Mexico</a>
-					</div>
-				</div>
-        <div class="row item">
-          <div class="col-md-4 text-center">
-            <img src="https://heavyeditorial.files.wordpress.com/2015/09/gettyimages-159044749_master.jpg?quality=65&strip=all&w=780" class="testimonials img-circle" alt="">
-          </div>
-          <div class="col-md-8">
-            <div class="box-comment" style="font-family: 'Palanquin Dark', sans-serif;">
-              "I have trouble remembering appointments AND where my doctors are located. Now with Vitals, all I hav to do is open my phone!"
-            </div>
-            <a class="author" href="#">Gary B, California</a>
-          </div>
-        </div>
-        <div class="row item">
-          <div class="col-md-4 text-center">
-            <img src="http://i2.kym-cdn.com/entries/icons/original/000/017/129/284e8ed69eda1a40ff857ad6c78158a79a457157.jpg" class="testimonials img-circle" alt="">
-          </div>
-          <div class="col-md-8">
-            <div class="box-comment" style="font-family: 'Palanquin Dark', sans-serif;">
-              "Vitals helps with my organizational skills. Best app ever!"
-            </div>
-            <a class="author" href="#">Calvin B, California</a>
-          </div>
-        </div>
-			</div>
-		</section>
-	</div>
-
-	<footer>
-		<div class="wrap-footer">
-			<div class="container">
-				<!-- <div class="row"> -->
-
-        <ul>
-          <li><a href="/about.html">Development Team</a></li>
-          <li><h7>Privacy</h7></li>
-          <li><h7>Legal</h7></li>
-          <li><h7>© 2017 Vitals Development Group</h7></li>
-
-
-        </ul>
-
-					<!-- </div>
-				</div> -->
-			</div>
-		</div>
-	</footer>
-
-
-	<!-- Core JavaScript Files -->
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.backTop.min.js"></script>
-	<script>
-		$(document).ready( function() {
-			$('#backTop').backTop({
-				'position' : 1200,
-				'speed' : 500,
-				'color' : 'red',
-			});
-		});
-	</script>
-
-	<!-- carousel -->
-	<script src="owl-carousel/owl.carousel.js"></script>
-    <script>
-    $(document).ready(function() {
-      $("#owl-brand").owlCarousel({
-        autoPlay: 3000,
-        items : 1,
-		itemsDesktop : [1199,1],
-        itemsDesktopSmall : [979,2],
-		navigation: false,
-      });
-    });
-    </script>
-</body>
+        <h2>This means you are: value = <span id='comment'></span> </h2>
+    </body>
 </html>
