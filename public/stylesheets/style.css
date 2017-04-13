@@ -189,6 +189,15 @@ width: 100%;
 overflow:hidden;
 }
 
+.recFoot2 {
+position:absolute;
+left: 0;
+bottom: 0;
+height: 120px;
+width: 100%;
+overflow:hidden;
+}
+
 .subFoot {
   position: absolute;
 left: 0;
