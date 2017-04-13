@@ -7,6 +7,8 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt-as-promised');
 const gapi = require('googleapis')
+const ev = require('express-validation');
+const validations = require('../validations/token');
 
 const SECRET = process.env.JWT_KEY || 'itsasecret';
 
@@ -15,7 +17,7 @@ function incorrectCredentials(res) {
   res.send('Bad email or password');
 }
 
-router.post('/token', (req, res, next) => {
+router.post('/token', ev(validations.post), (req, res, next) => {
   let email = req.body.email;
   let password = req.body.password;
 

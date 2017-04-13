@@ -9,7 +9,6 @@ module.exports.post = {
     email: Joi.string().label('Email').email().required().trim(),
     password: Joi.string().label('Password').min(7).strip().required(),
     age: Joi.number().integer().label('Age').required(),
-    gender: Joi.string().label("gender").required().trim(),
     weight: Joi.string().label('Weight').required().trim(),
     height: Joi.string().label('Height').required().trim()
   }
