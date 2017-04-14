@@ -9,6 +9,8 @@ $(document).ready(function() {
     $('#signUpForm').submit((event) => {
       event.preventDefault();
 
+      $('#signupErr').text('').hide();
+
       const firstName = $('#firstName').val().trim();
       const lastName = $('#lastName').val().trim();
       const email = $('#email').val().trim();
@@ -40,6 +42,9 @@ $(document).ready(function() {
           window.location.href = '/records';
         })
         .fail(($xhr) => {
+          $('#signupErr')
+            .text($xhr.responseText)
+            .show();
         });
     });
   })();
